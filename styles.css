@@ -7,26 +7,28 @@
 
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: radial-gradient(circle at top, #142614 0%, #050805 100%);
+    /* Adjusted background to be slightly lighter in the center for logo visibility */
+    background: radial-gradient(circle at center, #1b331b 0%, #2b442b 100%);
     color: #e0e6e0;
     line-height: 1.6;
 }
 
 /* Hero Styles */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .main-logo {
     width: 100%;
     max-width: 480px;
-    filter: drop-shadow(0 0 30px rgba(74, 222, 128, 0.15));
+    /* Added brightness and drop-shadow to make the outline pop */
+    filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.4)) brightness(1.2);
     margin-bottom: 2rem;
 }
 
@@ -36,19 +38,34 @@ body {
     margin-bottom: 1rem;
 }
 
+.sub-text {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.cfp-text {
+    color: #4ade80;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
 .highlight {
     color: #4ade80;
     font-weight: bold;
+    text-decoration: none;
 }
 
 /* Buttons */
 .hero-btns {
-    margin-top: 2rem;
+    margin: 2rem 0;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.cta-primary, .cta-secondary {
+.cta-primary, .cta-secondary, .cta-outline-small {
     padding: 14px 28px;
     border-radius: 8px;
     text-decoration: none;
@@ -66,8 +83,30 @@ body {
     color: #4ade80;
 }
 
+.cta-outline-small {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: 1px solid rgba(74, 222, 128, 0.5);
+    color: #4ade80;
+    font-size: 0.9rem;
+}
+
 .cta-primary:hover { background: #ffffff; }
-.cta-secondary:hover { background: rgba(74, 222, 128, 0.1); }
+.cta-secondary:hover, .cta-outline-small:hover { background: rgba(74, 222, 128, 0.1); }
+
+/* Sponsorship Section */
+.sponsorship-box {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-credit {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
 
 /* Timeline Styles */
 .timeline-section {
