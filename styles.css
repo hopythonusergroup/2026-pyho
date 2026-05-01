@@ -162,6 +162,68 @@ body {
     color: #ffffff;
 }
 
+/* --- Add these to your existing styles.css --- */
+
+/* Announcement Bar */
+.announcement-bar {
+    background-color: #1AB394; /* Sessionize Green for visual link */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.announcement-bar a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 10px;
+    transition: opacity 0.2s;
+}
+
+.announcement-bar a:hover {
+    opacity: 0.8;
+}
+
+/* Adjust Hero for the Fixed Bar */
+.hero {
+    padding-top: 80px; /* Prevents bar from overlapping logo */
+}
+
+/* CFP Link Styling */
+.cfp-link {
+    color: #4ade80;
+    text-decoration: none;
+    border: 2px solid #4ade80;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.cfp-link:hover {
+    background: #4ade80;
+    color: #050805;
+}
+
+/* Sessionize Backlink Container */
+.sessionize-backlink {
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Ensure mobile buttons look good */
+@media (max-width: 600px) {
+    .announcement-bar {
+        font-size: 0.8rem;
+    }
+}
+
 footer {
     text-align: center;
     padding: 50px 20px;
