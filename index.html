@@ -1,94 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyHo 2026 | Python User Group Ho</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PyHo 2026 — The Builders Conference. October 23–24, 2026 in Ho, Volta Region, Ghana. Python conference organized by the Python User Group Ho.">
+  <meta property="og:title"       content="PyHo 2026 — The Builders Conference">
+  <meta property="og:description" content="October 23–24, 2026 · Ho, Volta Region, Ghana. Django Girls Ho workshop, Builders Lab Sprint, 15+ talks.">
+  <meta property="og:type"        content="website">
+  <title>PyHo 2026 — The Builders Conference · Ho, Volta · Oct 23–24</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- ① Shared design system — loaded on EVERY page -->
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- ② Page-specific styles — only what this page needs -->
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
-    <div class="announcement-wrapper">
-        <div class="announcement-ticker">
-            <div class="ticker-item">📢 <strong>Call for Speakers is now OPEN!</strong> <a href="https://sessionize.com/pyho-2026/" target="_blank">Submit your talk &rarr;</a></div>
-            <div class="ticker-item">🚀 <strong>Announcing Builders Lab 2026:</strong> A partner-powered build sprint. <a href="#builders-lab">Learn More &rarr;</a></div>
-            <div class="ticker-item">📢 <strong>Call for Speakers is now OPEN!</strong> <a href="https://sessionize.com/pyho-2026/" target="_blank">Submit your talk &rarr;</a></div>
-            <div class="ticker-item">🚀 <strong>Announcing Builders Lab 2026:</strong> A partner-powered build sprint. <a href="#builders-lab">Learn More &rarr;</a></div>
-        </div>
+<!-- ════════════════════════════════════════════
+     NAVIGATION  (identical markup on every page)
+     ════════════════════════════════════════════ -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+
+  <a href="index.html" class="nav-logo" aria-label="PyHo 2026 — Home">
+    <img src="images/pyho2026-logo.png" alt="PyHo 2026">
+  </a>
+
+  <ul class="nav-links" id="navLinks" role="list">
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        About
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="pages/about.html"         role="menuitem">About PyHo</a>
+        <a href="pages/psf.html"           role="menuitem">Python Software Foundation</a>
+        <a href="pages/code-of-conduct.html" role="menuitem">Code of Conduct</a>
+        <a href="pages/diversity.html"     role="menuitem">Diversity &amp; Inclusion</a>
+        <a href="pages/health-safety.html" role="menuitem">Health &amp; Safety</a>
+        <div class="dropdown-divider"></div>
+        <a href="pages/organizers.html"    role="menuitem">Organizers</a>
+        <a href="pages/faq.html"           role="menuitem">FAQ</a>
+        <a href="pages/builders-lab.html"  role="menuitem">Builders Lab Sprint</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Venue
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="pages/welcome-to-ho.html" role="menuitem">Welcome to Ho</a>
+        <a href="pages/venue.html"         role="menuitem">Conference Venue</a>
+        <a href="pages/venue.html#getting-here" role="menuitem">Getting Here</a>
+        <a href="pages/venue.html#accommodation" role="menuitem">Accommodation</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Sponsor
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="pages/sponsors.html#why-sponsor"  role="menuitem">Why Sponsor</a>
+        <a href="pages/sponsors.html#our-sponsors" role="menuitem">Our Sponsors</a>
+        <a href="pages/sponsors.html#prospectus"   role="menuitem">Sponsorship Prospectus</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Speaking
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="pages/speaking.html"            role="menuitem">Speaking at PyHo</a>
+        <a href="pages/speaking.html#resources"  role="menuitem">Speaker Resources</a>
+        <a href="pages/speaking.html#submit"     role="menuitem">Submit a Talk</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a href="pages/attend.html">Attend</a>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Schedule
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="pages/schedule.html#django-girls" role="menuitem">Django Girls Ho — Oct 22–23</a>
+        <a href="pages/schedule.html#builders-lab" role="menuitem">Builders Lab Sprint — Oct 23</a>
+        <a href="pages/schedule.html#talks"        role="menuitem">Talks — Oct 24</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Volunteer
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="pages/volunteer.html"          role="menuitem">Volunteering at PyHo</a>
+        <a href="pages/volunteer.html#apply"    role="menuitem">Apply to Volunteer</a>
+      </div>
+    </li>
+
+  </ul>
+
+  <a href="pages/attend.html" class="nav-cta">Buy Ticket</a>
+
+  <!-- Mobile hamburger -->
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+
+</nav>
+<!-- /NAVIGATION -->
+
+
+<!-- ════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-inner">
+
+    <img
+      class="hero-logo"
+      src="images/pyho2026-logo.png"
+      alt="PyHo 2026 — The Builders Conference"
+    >
+
+    <p class="hero-slogan">The Builders Conference</p>
+    <p class="hero-date">October 23–24, 2026 &nbsp;·&nbsp; Ho, Volta Region, Ghana</p>
+
+    <div class="hero-actions">
+      <a href="pages/attend.html" class="btn btn-primary btn-primary-lg">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Buy Ticket
+      </a>
+      <a href="pages/schedule.html" class="btn btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        View Schedule
+      </a>
+      <a href="pages/speaking.html#submit" class="btn btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Submit Talk Proposal
+      </a>
     </div>
 
-    <header class="hero">
-        <div class="logo-wrapper">
-            <img src="PyHo logo.png" alt="PyHo 2026 Logo" class="main-logo">
+    <!-- Stats strip -->
+    <div class="hero-stats" aria-label="Conference at a glance">
+      <div class="hero-stat"><div class="stat-dot" aria-hidden="true"></div><strong>200+</strong>&nbsp;Attendees</div>
+      <div class="hero-stat"><div class="stat-dot" aria-hidden="true"></div><strong>2</strong>&nbsp;Days</div>
+      <div class="hero-stat"><div class="stat-dot" aria-hidden="true"></div><strong>Django Girls Ho</strong>&nbsp;Workshop</div>
+      <div class="hero-stat"><div class="stat-dot" aria-hidden="true"></div><strong>Builders Lab</strong>&nbsp;Sprint</div>
+      <div class="hero-stat"><div class="stat-dot" aria-hidden="true"></div><strong>15+</strong>&nbsp;Talks</div>
+    </div>
+
+    <!--was here-->
+
+  </div>
+</section>
+<!-- /HERO -->
+
+
+<!-- Mountain silhouette transition from forest → cream -->
+<div class="mountain-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 64" preserveAspectRatio="none" fill="#F7F4EE" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,64 L0,38 L72,20 L144,36 L252,12 L360,30 L468,8 L576,26 L684,6 L792,22 L900,10 L1008,28 L1116,14 L1224,32 L1332,16 L1440,28 L1440,64 Z"/>
+  </svg>
+</div>
+
+<!-- Group photo — swap src once you have the image -->
+    <div class="hero-banner">
+      <img src="images/pyho-24-group-photo.jpg" alt="PyHo 2025 attendees group photo">
+      <!-- <div class="hero-banner-placeholder" role="img" aria-label="PyHo 2025 group photo — coming soon">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0.9" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <p>PyHo 2025 Community Photo — Coming Soon</p>
+      </div> -->
+    </div>
+
+
+<!-- ════════════════════════════════════════════
+     ABOUT / THE CONFERENCE
+     ════════════════════════════════════════════ -->
+<section id="about" class="section" aria-labelledby="about-heading">
+  <div class="about-grid">
+
+    <!-- Left: copy -->
+    <div class="about-copy">
+      <span class="eyebrow">The Conference</span>
+      <h2 id="about-heading">About PyHo</h2>
+      <p class="section-lead">PyHo is the annual Python conference for Ho, the Volta Region, and the wider Ghana developer community — two days of talks, workshops, sprints, and real connections.</p>
+      <p class="body-text">From beginner-friendly workshops for first-time coders to deep technical sessions for experienced engineers, PyHo is where the Python community in the Volta Region comes alive. We believe great software begins with great communities.</p>
+      <a href="pages/about.html" class="link-arrow">Learn more about PyHo →</a>
+    </div>
+
+    <!-- Right: highlight cards -->
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <span class="highlight-label">Community-driven</span>
+        <p>Organized entirely by volunteers from the Python User Group Ho. Every session is submitted by the community, reviewed by the community, and built for the community.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-label">Open &amp; Inclusive</span>
+        <p>PyHo actively supports diversity in tech. We partner with Django Girls Ho to bring new voices into the Python world and provide financial assistance for those who need it.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-label">PSF-affiliated</span>
+        <p>Organized in partnership with the Python Software Foundation — the nonprofit behind Python and events like PyCon — sharing their commitment to community-first values.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- /ABOUT -->
+
+<div class="section-divider"></div>
+
+
+<!-- ════════════════════════════════════════════
+     EVENTS — Three cards
+     ════════════════════════════════════════════ -->
+<section id="events" class="section" aria-labelledby="events-heading">
+
+  <span class="eyebrow">What's Happening</span>
+  <h2 id="events-heading">Three Events, One Weekend</h2>
+  <p class="section-lead">PyHo 2026 spans three distinct events across the same weekend. Come for one, stay for all.</p>
+
+  <div class="events-grid">
+
+    <!-- Django Girls Ho -->
+    <article class="card event-card" aria-labelledby="dg-heading">
+      <span class="badge badge-purple">Django Girls Ho</span>
+      <p class="event-date">October 22–23, 2026</p>
+      <h3 id="dg-heading">Django Girls Ho Workshop</h3>
+      <p>We're proud to host the Django Girls Ho workshop as part of PyHo 2026 — a free, full-day programming workshop for women and non-binary people who want to build their first web app with Python and Django. No prior experience required.</p>
+      <div class="note-box note-box-purple">
+        <strong style="color:#6D28D9;">Free to attend.</strong>
+        Registration is via the Django Girls website. Spots are limited — apply early.
+      </div>
+      <a href="https://djangogirls.org" class="card-link" target="_blank" rel="noopener">
+        Register on djangogirls.org
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </article>
+
+    <!-- Builders Lab Sprint -->
+    <article class="card card-featured event-card" aria-labelledby="sprint-heading">
+      <div class="flex gap-2 flex-wrap">
+        <span class="badge badge-teal">Builders Lab Sprint</span>
+        <span class="badge badge-yellow">New 2026</span>
+      </div>
+      <p class="event-date">October 23, 2026</p>
+      <h3 id="sprint-heading">PyHo Builders Lab Sprint</h3>
+      <p>A focused, hands-on coding sprint where developers team up to build, contribute, and ship real projects. Whether you're contributing to open-source Python libraries, hacking on community tools, or prototyping something entirely new — the Builders Lab is your space to make things.</p>
+      <div class="note-box note-box-teal">
+        <strong style="color:#0F766E;">Calling track partners &amp; sponsors.</strong>
+        Join us in supporting individual sprint tracks. Contact us about partnership opportunities.
+      </div>
+      <a href="pages/builders-lab.html" class="card-link">
+        Learn about the Sprint
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </article>
+
+    <!-- Conference Talks -->
+    <article class="card event-card" aria-labelledby="talks-heading">
+      <span class="badge badge-forest">Conference Talks</span>
+      <p class="event-date">October 24, 2026</p>
+      <h3 id="talks-heading">Main Conference Day</h3>
+      <p>The heart of PyHo. A full day of community-selected talks spanning Python for data science, web development, DevOps, automation, open-source, and more — reviewed through an open Call for Proposals process.</p>
+      <div class="note-box note-box-yellow">
+        <strong style="color:var(--forest);">Call for Speakers is open.</strong>
+        Submit your talk proposal. We welcome talks at all levels, from beginner to advanced.
+      </div>
+      <a href="pages/speaking.html#submit" class="card-link">
+        Submit a talk proposal
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </article>
+
+  </div>
+
+  <!-- Schedule live banner -->
+  <div class="schedule-banner" role="complementary" aria-label="Schedule announcement">
+    <div>
+      <div class="pill pill-live" aria-label="Schedule is live">
+        <div class="live-dot" aria-hidden="true"></div>
+        Schedule Live
+      </div>
+      <h3>The PyHo 2026 Schedule is published</h3>
+      <p>View the full program — Django Girls Ho, Builders Lab Sprint, and all conference talks in one place.</p>
+    </div>
+    <a href="pages/schedule.html" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      View Full Schedule
+    </a>
+  </div>
+
+</section>
+<!-- /EVENTS -->
+
+<div class="section-divider"></div>
+
+
+<!-- ════════════════════════════════════════════
+     SPONSORS
+     ════════════════════════════════════════════ -->
+<section id="sponsors" class="sponsors-section" aria-labelledby="sponsors-heading">
+  <div class="sponsors-section-inner">
+
+    <span class="eyebrow">Our Sponsors</span>
+    <h2 id="sponsors-heading">Made Possible By</h2>
+    <p class="section-lead">PyHo is community-funded. Our sponsors make it possible to keep tickets affordable, support travel grants, and grow the Python ecosystem across the Volta Region and Ghana.</p>
+
+    <!-- Platinum -->
+    <div class="sponsor-tier-section">
+      <div class="tier-heading">Platinum</div>
+      <div class="sponsors-grid sponsors-platinum">
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><span>Your Logo Here</span></div>
+          <span class="tier-label">Platinum</span>
         </div>
-        <div class="hero-content">
-            <h1 class="date-header">October 23 – 24, 2026</h1>
-            <p class="sub-text">Ghana's biggest gathering of Devs, Enthusiasts, and Industry Experts. Now featuring the <strong>Builders Lab</strong> sprint experience.</p>
-
-            <p class="cfp-text">
-                <a href="https://sessionize.com/pyho-2026/" target="_blank" class="cfp-link">CFP Open — Apply Now</a>
-            </p>
-            
-            <div class="hero-btns">
-                <a href="#builders-lab" class="cta-primary">Builders Lab</a>
-                <a href="#timeline" class="cta-secondary">View Timeline</a>
-                <a href="sponsors.html" class="cta-secondary">Sponsorship</a> 
-            </div>
-
-            <div class="sessionize-backlink">
-                <a href="https://sessionize.com/" style="color: #fff; text-decoration: none;">
-                    <strong>Call for Speakers</strong> powered by <strong style="color: #1AB394;">Sessionize.com</strong>
-                </a>
-            </div>
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><span>Your Logo Here</span></div>
+          <span class="tier-label">Platinum</span>
         </div>
-    </header>
+      </div>
+    </div>
 
-    <section id="builders-lab" class="builders-section">
-        <div class="container">
-            <div class="builders-intro">
-                <span class="badge">New for 2026</span>
-                <h2>PyHo Builders Lab</h2>
-                <p class="tagline">Python for Builders: AI, Automation & Real-World Products.</p>
-                <p class="desc">A partner-powered build sprint where developers collaborate to design, prototype, and ship real-world products. This is not a workshop—it’s a <strong>Build + Ship</strong> experience.</p>
-            </div>
-
-            <div class="builders-grid">
-                <div class="b-card">
-                    <h3>What it is</h3>
-                    <p>A focused sprint-style collaboration bridging the gap between <strong>learning → building → shipping</strong>. Access modern developer tooling, real datasets, and ecosystem mentorship.</p>
-                </div>
-                <div class="b-card">
-                    <h3>Who should join</h3>
-                    <p>Backend engineers, AI enthusiasts, product-minded creators, and open-source contributors. Whether building your first product or refining systems, come to collaborate and ship.</p>
-                </div>
-            </div>
-
-            <h3 class="track-title">Tracks & Domains</h3>
-            <div class="tracks-grid">
-                <div class="track-card"><h4>AI/Data</h4><p>Agents, automation, & intelligent analytics.</p></div>
-                <div class="track-card"><h4>FinTech</h4><p>Payment systems & financial API tools.</p></div>
-                <div class="track-card"><h4>HealthTech</h4><p>Accessibility, diagnostics & platforms.</p></div>
-                <div class="track-card"><h4>AgriTech</h4><p>Logistics & supply chain innovation.</p></div>
-                <div class="track-card"><h4>Web3</h4><p>Decentralized apps & digital ownership.</p></div>
-            </div>
-
-            <div class="builders-flow">
-                <h3>The Flow</h3>
-                <div class="flow-steps">
-                    <span>1. Apply</span> <span>2. Join Track</span> <span>3. Form Teams</span> <span>4. Build</span> <span>5. Live Demo</span>
-                </div>
-            </div>
-
-            <div class="partner-invite">
-                <h3>Partner with the Lab</h3>
-                <p>Sponsor a track, provide APIs, or mentor the next wave of innovation. Cloud providers, AI platforms, and startups—build alongside the community.</p>
-                <div class="hero-btns">
-                    <a href="mailto:sponsorship@pythonho.com" class="cta-secondary">Partner Interest</a>
-                    <span class="waitlist-text">Registration opening soon.</span>
-                </div>
-            </div>
+    <!-- Gold -->
+    <div class="sponsor-tier-section">
+      <div class="tier-heading">Gold</div>
+      <div class="sponsors-grid sponsors-gold">
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><span>Your Logo Here</span></div>
+          <span class="tier-label">Gold</span>
         </div>
-    </section>
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><span>Your Logo Here</span></div>
+          <span class="tier-label">Gold</span>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><span>Your Logo Here</span></div>
+          <span class="tier-label">Gold</span>
+        </div>
+      </div>
+    </div>
 
-    </body>
+    <!-- Silver & Community -->
+    <div class="sponsor-tier-section">
+      <div class="tier-heading">Silver &amp; Community</div>
+      <div class="sponsors-grid sponsors-silver">
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><span>Your Logo Here</span></div>
+          <span class="tier-label">Silver</span>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><span>Your Logo Here</span></div>
+          <span class="tier-label">Silver</span>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><span>Your Logo Here</span></div>
+          <span class="tier-label">Community</span>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><span>Your Logo Here</span></div>
+          <span class="tier-label">Community</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Django Girls Sponsor -->
+    <div class="sponsor-tier-section">
+      <div class="tier-heading">Django Girls Workshop Sponsor</div>
+      <div class="sponsors-grid sponsors-silver">
+        <div class="sponsor-card">
+          <div class="sponsor-logo-placeholder"><img src="images/honeybadger_logo.png" alt="PyHo 2026"></div>
+          <span class="tier-label">Django Girls</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center" style="margin-top: var(--sp-2);">
+      <a href="pages/sponsors.html" class="link-arrow" style="font-size:15.5px;">Become a Sponsor →</a>
+    </p>
+
+  </div>
+</section>
+<!-- /SPONSORS -->
+
+
+<!-- ════════════════════════════════════════════
+     TICKET CTA
+     ════════════════════════════════════════════ -->
+<section class="ticket-cta-section" aria-labelledby="cta-heading">
+  <div class="ticket-cta-inner">
+    <span class="eyebrow">Join Us in Ho</span>
+    <h2 id="cta-heading">Ready to Build Something?</h2>
+    <p>Secure your spot at PyHo 2026. Tickets are limited and early-bird pricing is available for a short time.</p>
+    <a href="pages/attend.html" class="btn btn-primary btn-primary-lg">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      Buy Your Ticket
+    </a>
+  </div>
+</section>
+<!-- /TICKET CTA -->
+
+
+<!-- ════════════════════════════════════════════
+     ORGANIZER STRIP
+     ════════════════════════════════════════════ -->
+<div class="organizer-strip">
+  <p>The PyHo 2026 Builders Conference is organized by the <strong>Python User Group Ho</strong></p>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     FOOTER  (identical markup on every page)
+     ════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <img src="images/pyho2026-logo.png" alt="PyHo 2026">
+        <p>Annual Python conference for the Ho community and Volta Region, Ghana.</p>
+      </div>
+
+      <!-- About -->
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="pages/about.html">About PyHo</a>
+        <a href="pages/psf.html">Python Software Foundation</a>
+        <a href="pages/code-of-conduct.html">Code of Conduct</a>
+        <a href="pages/diversity.html">Diversity &amp; Inclusion</a>
+        <a href="pages/health-safety.html">Health &amp; Safety</a>
+        <a href="pages/faq.html">FAQ</a>
+      </div>
+
+      <!-- Participate -->
+      <div class="footer-col">
+        <h4>Participate</h4>
+        <a href="pages/attend.html">Buy Ticket</a>
+        <a href="pages/speaking.html#submit">Submit Talk Proposal</a>
+        <a href="pages/volunteer.html">Volunteer</a>
+        <a href="pages/sponsors.html">Sponsor PyHo</a>
+        <a href="https://djangogirls.org" target="_blank" rel="noopener">Django Girls Ho</a>
+        <a href="pages/builders-lab.html">Builders Lab Sprint</a>
+      </div>
+
+      <!-- Info -->
+      <div class="footer-col">
+        <h4>Info</h4>
+        <a href="pages/schedule.html">Schedule</a>
+        <a href="pages/venue.html">Venue &amp; Location</a>
+        <a href="pages/welcome-to-ho.html">Welcome to Ho</a>
+        <a href="pages/organizers.html">Organizers</a>
+        <a href="pages/sponsors.html#prospectus">Sponsorship Prospectus</a>
+        <a href="mailto:hello@pyho.org">Contact Us</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Python User Group Ho. PyHo 2026 is a community event.</p>
+
+      <div class="footer-socials" aria-label="Social media links">
+
+        <!-- X / Twitter -->
+        <a href="https://twitter.com/pyho_gh" target="_blank" rel="noopener" aria-label="PyHo on X (Twitter)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/company/pyho" target="_blank" rel="noopener" aria-label="PyHo on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/pyho-gh" target="_blank" rel="noopener" aria-label="PyHo on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@pyho" target="_blank" rel="noopener" aria-label="PyHo on YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+<!-- /FOOTER -->
+
+
+<!-- ① Shared JS — loaded on every page -->
+<script src="js/site.js"></script>
+
+</body>
 </html>
