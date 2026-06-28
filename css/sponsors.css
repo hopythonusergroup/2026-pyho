@@ -1,0 +1,695 @@
+/* ============================================================
+   sponsors.css — PyHo 2026 · Why Sponsor page only
+   Loads after base.css. Zero duplication of base tokens/classes.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   Reach strip — bold numbers just below the page hero
+   ---------------------------------------------------------- */
+.reach-strip {
+  background: var(--yellow);
+  padding: 0;
+}
+
+.reach-strip__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--sp-5);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.reach-stat {
+  padding: 2.25rem var(--sp-5);
+  text-align: center;
+  border-right: 1px solid rgba(26, 58, 42, 0.14);
+}
+.reach-stat:last-child {
+  border-right: none;
+}
+
+.reach-stat__number {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.875rem);
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.reach-stat__label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--forest);
+  opacity: 0.62;
+}
+
+
+/* ----------------------------------------------------------
+   Page sections
+   ---------------------------------------------------------- */
+.ws-section {
+  padding: 5rem var(--sp-5);
+}
+
+.ws-section--forest {
+  background: var(--forest);
+}
+
+.ws-section--sage {
+  background: var(--sage);
+}
+
+.ws-section--sand {
+  background: var(--sand);
+}
+
+.ws-section__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.ws-section__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.ws-section__heading--light {
+  color: var(--white);
+}
+
+.ws-section__sub {
+  font-size: 1.0625rem;
+  color: #555;
+  max-width: 580px;
+  line-height: 1.65;
+  margin: 0 0 2.75rem;
+}
+
+.ws-section__sub--light {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ----------------------------------------------------------
+   Why sponsor — value prop grid
+   ---------------------------------------------------------- */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.value-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+
+.value-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.value-card__icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.value-card__title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.625rem;
+}
+
+.value-card__body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Who attends — audience split
+   ---------------------------------------------------------- */
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.audience-card {
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  border: 1px solid rgba(26, 58, 42, 0.18);
+}
+
+.audience-card--local {
+  background: var(--forest);
+}
+
+.audience-card--intl {
+  background: var(--white);
+}
+
+.audience-card__label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
+.audience-card--local .audience-card__label {
+  color: var(--yellow);
+}
+
+.audience-card--intl .audience-card__label {
+  color: var(--forest);
+  opacity: 0.55;
+}
+
+.audience-card__heading {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.audience-card--local .audience-card__heading {
+  color: var(--white);
+}
+
+.audience-card--intl .audience-card__heading {
+  color: var(--forest);
+}
+
+.audience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.audience-list li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+.audience-card--local .audience-list li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.audience-card--intl .audience-list li {
+  color: #4a4a4a;
+}
+
+.audience-list li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 0.42em;
+}
+
+.audience-card--local .audience-list li::before {
+  background: var(--yellow);
+}
+
+.audience-card--intl .audience-list li::before {
+  background: var(--forest);
+  opacity: 0.4;
+}
+
+
+/* ----------------------------------------------------------
+   Tier benefits table
+   ---------------------------------------------------------- */
+.benefits-table-wrap {
+  overflow-x: auto;
+  margin-top: 2.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.benefits-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  font-size: 0.875rem;
+}
+
+.benefits-table thead tr {
+  background: var(--forest);
+}
+
+.benefits-table thead th {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.benefits-table thead th:first-child {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.45);
+  width: 34%;
+}
+
+.benefits-table thead th:last-child {
+  border-right: none;
+}
+
+/* Tier column headers */
+.col-platinum { color: #e2d4f0 !important; }
+.col-gold     { color: var(--yellow) !important; }
+.col-silver   { color: #c0cdd8 !important; }
+.col-community{ color: #a8d8b0 !important; }
+
+.benefits-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.12s;
+}
+
+.benefits-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.benefits-table tbody tr:hover {
+  background: var(--sage);
+}
+
+.benefits-table tbody td {
+  padding: 0.875rem 1.25rem;
+  text-align: center;
+  color: var(--ink-light);
+  border-right: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.benefits-table tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--forest);
+  border-right: 1px solid var(--border-strong);
+}
+
+.benefits-table tbody td:last-child {
+  border-right: none;
+}
+
+/* Category row */
+.benefits-table .category-row td {
+  background: var(--sand);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stone) !important;
+  padding: 0.5rem 1.25rem;
+  text-align: left !important;
+  border-right: none;
+}
+
+/* Check / cross / value indicators */
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(26, 58, 42, 0.08);
+  color: var(--forest);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.check--yes {
+  background: rgba(26, 58, 42, 0.1);
+  color: var(--forest);
+}
+
+.check--no {
+  background: transparent;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.benefit-val {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+
+/* ----------------------------------------------------------
+   Testimonial / quote block
+   ---------------------------------------------------------- */
+.quote-block {
+  background: var(--forest);
+  border-radius: var(--radius-xl);
+  padding: 3rem 3.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+
+.quote-block::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.5rem;
+  left: 2rem;
+  font-family: var(--font-display);
+  font-size: 10rem;
+  line-height: 1;
+  color: rgba(255, 212, 59, 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+
+.quote-block__text {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 2vw, 1.4rem);
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.55;
+  margin: 0 0 1.5rem;
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+
+.quote-block__attr {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-block__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 212, 59, 0.18);
+  border: 2px solid rgba(255, 212, 59, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--yellow);
+  flex-shrink: 0;
+}
+
+.quote-block__name {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.quote-block__role {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Process — how sponsoring works
+   ---------------------------------------------------------- */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.process-step {
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--border);
+  position: relative;
+}
+
+.process-step:last-child {
+  border-right: none;
+}
+
+.process-step__num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--yellow);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  display: block;
+  /* Yellow counter is valid here: this IS a genuine 4-step sequence */
+}
+
+.process-step__title {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+}
+
+.process-step__body {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+
+/* ----------------------------------------------------------
+   CTA band at bottom
+   ---------------------------------------------------------- */
+.sponsor-cta-band {
+  background: var(--yellow);
+  padding: 4rem var(--sp-5);
+  text-align: center;
+}
+
+.sponsor-cta-band__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sponsor-cta-band__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+
+.sponsor-cta-band__sub {
+  font-size: 1.0625rem;
+  color: rgba(26, 58, 42, 0.7);
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+.sponsor-cta-band__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Dark outline button for use on yellow bg */
+.btn-outline-forest {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(26, 58, 42, 0.35);
+  background: transparent;
+  color: var(--forest);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.12s;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.btn-outline-forest:hover {
+  border-color: var(--forest);
+  background: rgba(26, 58, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+.btn-forest {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--forest);
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.12s;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.btn-forest:hover {
+  background: var(--forest-mid);
+  transform: translateY(-2px);
+}
+
+
+/* ----------------------------------------------------------
+   Responsive
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-step:nth-child(2) {
+    border-right: none;
+  }
+
+  .process-step:nth-child(3) {
+    border-right: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+  }
+
+  .process-step:nth-child(4) {
+    border-right: none;
+    border-top: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 900px) {
+  .reach-strip__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reach-stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .reach-stat:nth-child(3),
+  .reach-stat:nth-child(4) {
+    border-top: 1px solid rgba(26, 58, 42, 0.14);
+  }
+
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ws-section {
+    padding: 3.5rem var(--sp-4);
+  }
+
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-table thead th,
+  .benefits-table tbody td {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .quote-block {
+    padding: 2rem 1.75rem;
+  }
+
+  .quote-block::before {
+    font-size: 7rem;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .process-step:last-child {
+    border-bottom: none;
+  }
+
+  .process-step:nth-child(3),
+  .process-step:nth-child(4) {
+    border-top: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .reach-strip__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sponsor-cta-band__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sponsor-cta-band__actions a {
+    justify-content: center;
+  }
+}
