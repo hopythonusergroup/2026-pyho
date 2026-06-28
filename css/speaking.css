@@ -1,0 +1,817 @@
+/* ============================================================
+   speaking.css — PyHo 2026 · Speaking page only
+   Loads after base.css. Zero duplication of base tokens/classes.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   In-page subnav (same pattern as venue.html)
+   ---------------------------------------------------------- */
+.speaking-subnav {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 90;
+  background: var(--forest);
+  border-bottom: 1px solid rgba(255, 212, 59, 0.18);
+}
+
+.speaking-subnav__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--sp-5);
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.speaking-subnav__inner::-webkit-scrollbar { display: none; }
+
+.speaking-subnav__link {
+  display: inline-block;
+  padding: 0.875rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.55);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s, border-color 0.18s;
+  white-space: nowrap;
+}
+.speaking-subnav__link:hover {
+  color: var(--cream);
+}
+.speaking-subnav__link.active {
+  color: var(--yellow);
+  border-bottom-color: var(--yellow);
+}
+
+
+/* ----------------------------------------------------------
+   CFS banner — urgent call to action, sits right below subnav
+   ---------------------------------------------------------- */
+.cfs-banner {
+  background: var(--yellow);
+  padding: 1.125rem var(--sp-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.cfs-banner__text {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--forest);
+}
+
+.cfs-banner__text strong {
+  font-weight: 700;
+}
+
+.cfs-banner__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(26, 58, 42, 0.12);
+  color: var(--forest);
+  border: 1.5px solid rgba(26, 58, 42, 0.25);
+  border-radius: 20px;
+  padding: 0.3em 0.8em;
+  white-space: nowrap;
+}
+
+.cfs-banner__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--forest);
+  animation: pulse-dot 1.8s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.cfs-banner__cta {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--forest);
+  background: rgba(26, 58, 42, 0.1);
+  border: 2px solid rgba(26, 58, 42, 0.3);
+  border-radius: var(--radius-md);
+  padding: 0.55rem 1.25rem;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, transform 0.12s;
+  white-space: nowrap;
+}
+.cfs-banner__cta:hover {
+  background: rgba(26, 58, 42, 0.18);
+  border-color: var(--forest);
+  transform: translateY(-1px);
+}
+
+
+/* ----------------------------------------------------------
+   Page sections
+   ---------------------------------------------------------- */
+.sp-section {
+  padding: 5rem var(--sp-5);
+}
+
+.sp-section--sage {
+  background: var(--sage);
+}
+
+.sp-section--sand {
+  background: var(--sand);
+}
+
+.sp-section--forest {
+  background: var(--forest);
+}
+
+.sp-section__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.sp-section__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.sp-section__heading--light {
+  color: var(--white);
+}
+
+.sp-section__sub {
+  font-size: 1.0625rem;
+  color: #555;
+  max-width: 620px;
+  line-height: 1.65;
+  margin: 0 0 3rem;
+}
+
+.sp-section__sub--light {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* ----------------------------------------------------------
+   Why Speak — benefit cards
+   ---------------------------------------------------------- */
+.why-speak-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.why-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.875rem 1.625rem;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+
+.why-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.why-card__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.why-card__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+}
+
+.why-card__body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Format section — two cards (25min + lightning)
+   ---------------------------------------------------------- */
+.format-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.format-card {
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.format-card--main {
+  background: var(--forest);
+  border: 2px solid var(--forest);
+}
+
+.format-card--lightning {
+  background: var(--white);
+  border: 1.5px solid var(--border-strong);
+}
+
+.format-card__duration {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.format-card--main .format-card__duration {
+  color: var(--yellow);
+}
+
+.format-card--lightning .format-card__duration {
+  color: var(--forest);
+  opacity: 0.18;
+}
+
+.format-card__unit {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.format-card--main .format-card__unit {
+  color: rgba(255, 212, 59, 0.6);
+}
+
+.format-card--lightning .format-card__unit {
+  color: var(--stone);
+}
+
+.format-card__name {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 1rem 0 0.625rem;
+}
+
+.format-card--main .format-card__name {
+  color: var(--white);
+}
+
+.format-card--lightning .format-card__name {
+  color: var(--forest);
+}
+
+.format-card__desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.format-card--main .format-card__desc {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.format-card--lightning .format-card__desc {
+  color: #555;
+}
+
+.format-card__tag {
+  display: inline-flex;
+  margin-top: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3em 0.75em;
+  border-radius: 4px;
+}
+
+.format-card--main .format-card__tag {
+  background: rgba(255, 212, 59, 0.14);
+  color: var(--yellow);
+  border: 1px solid rgba(255, 212, 59, 0.28);
+}
+
+.format-card--lightning .format-card__tag {
+  background: var(--sage);
+  color: var(--forest-mid);
+  border: 1px solid rgba(26, 58, 42, 0.15);
+}
+
+
+/* ----------------------------------------------------------
+   Proposing a talk — steps
+   ---------------------------------------------------------- */
+.proposal-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  margin-bottom: 2rem;
+}
+
+.proposal-step {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.proposal-step:last-child {
+  border-bottom: none;
+}
+
+.proposal-step__num {
+  background: var(--forest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--yellow);
+  flex-shrink: 0;
+}
+
+.proposal-step__content {
+  padding: 1.5rem 1.75rem;
+}
+
+.proposal-step__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.375rem;
+}
+
+.proposal-step__body {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+.proposal-step__body a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+
+/* ----------------------------------------------------------
+   Talk tracks — the 5 topic areas
+   ---------------------------------------------------------- */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.track-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--white);
+  overflow: hidden;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+
+.track-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Each track gets a top accent stripe — using CSS custom property set inline */
+.track-card__stripe {
+  height: 4px;
+  background: var(--track-color, var(--forest));
+}
+
+.track-card__body {
+  padding: 1.625rem 1.5rem;
+}
+
+.track-card__number {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--track-color, var(--forest));
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.track-card__title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+
+.track-card__tagline {
+  font-size: 0.875rem;
+  color: #555;
+  margin: 0 0 1.125rem;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+.track-topics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.track-topics li {
+  font-size: 0.84rem;
+  color: #4a4a4a;
+  line-height: 1.45;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.track-topics li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--track-color, var(--forest));
+  opacity: 0.6;
+}
+
+/* Track colour map (set via style="" inline) */
+/* Track 1 — AI/ML: teal */
+/* Track 2 — Automation: amber */
+/* Track 3 — Web: forest */
+/* Track 4 — Data: indigo */
+/* Track 5 — Emerging: rose */
+
+
+/* ----------------------------------------------------------
+   Speaker Resources section
+   ---------------------------------------------------------- */
+.resources-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.resource-block {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.875rem;
+}
+
+.resource-block__icon {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.resource-block__title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.375rem;
+}
+
+.resource-block__sub {
+  font-size: 0.875rem;
+  color: var(--stone);
+  margin: 0 0 1.375rem;
+  line-height: 1.5;
+}
+
+.resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.resource-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 1rem;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.resource-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.resource-item__label {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--forest);
+  white-space: nowrap;
+  padding-top: 0.05em;
+}
+
+.resource-item__value {
+  font-size: 0.875rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.resource-item__value code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8125rem;
+  background: var(--sage);
+  color: var(--forest);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Accessibility checklist */
+.a11y-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.a11y-checklist li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 0.625rem;
+  align-items: start;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+.a11y-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  background: var(--sage);
+  border: 1.5px solid rgba(26, 58, 42, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.05em;
+}
+
+.a11y-check svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--forest);
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.resource-note {
+  margin-top: 1.25rem;
+  padding: 0.875rem 1rem;
+  background: var(--sage);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--forest);
+  border-left: 3px solid var(--forest);
+}
+
+.resource-note strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+
+/* ----------------------------------------------------------
+   Submit CTA section
+   ---------------------------------------------------------- */
+.submit-cta {
+  background: var(--forest);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.submit-cta__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 5rem var(--sp-5);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.submit-cta__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+
+.submit-cta__sub {
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.58);
+  margin: 0 0 0.75rem;
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+.submit-cta__deadline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255, 212, 59, 0.72);
+}
+
+.submit-cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  align-items: flex-end;
+}
+
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--forest);
+  background: var(--yellow);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.12s;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.btn-submit:hover {
+  background: var(--yellow-dk);
+  transform: translateY(-2px);
+}
+
+.submit-cta__contact {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.42);
+  text-align: right;
+}
+
+.submit-cta__contact a {
+  color: rgba(255, 212, 59, 0.7);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.submit-cta__contact a:hover {
+  color: var(--yellow);
+}
+
+
+/* ----------------------------------------------------------
+   Responsive
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .tracks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-speak-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .submit-cta__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .submit-cta__actions {
+    align-items: flex-start;
+  }
+
+  .submit-cta__contact {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .sp-section {
+    padding: 3.5rem var(--sp-4);
+  }
+
+  .format-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-speak-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tracks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proposal-steps {
+    border-radius: var(--radius-md);
+  }
+
+  .cfs-banner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .speaking-subnav__link {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .submit-cta__inner {
+    padding: 3.5rem var(--sp-4);
+  }
+
+  .btn-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
