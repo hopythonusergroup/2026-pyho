@@ -1,0 +1,177 @@
+/* ============================================================
+   PyHo 2026 — home.css
+   Styles specific to index.html only.
+   base.css must be loaded before this file.
+   ============================================================ */
+
+
+/* ── ABOUT SECTION ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-copy h2 {
+  margin-bottom: var(--sp-4);
+}
+
+.about-copy .section-lead {
+  margin-bottom: var(--sp-3);
+}
+
+.about-copy .body-text {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.72;
+  margin-bottom: var(--sp-5);
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.highlight-card {
+  background: var(--sage);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  border: 1px solid var(--border);
+}
+
+.highlight-card .highlight-label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--forest-light);
+  margin-bottom: var(--sp-2);
+  display: block;
+}
+
+.highlight-card p {
+  font-size: 14px;
+  color: var(--ink-light);
+  line-height: 1.65;
+}
+
+
+/* ── EVENTS SECTION (three cards) ── */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+/* Date label inside event card */
+.event-card .event-date {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.event-card h3 {
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.event-card > p {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Card-level link */
+.card-link {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap 0.15s, color 0.15s;
+  margin-top: var(--sp-1);
+}
+
+.card-link:hover {
+  gap: 9px;
+  color: var(--forest-light);
+}
+
+
+/* ── SPONSORS PAGE SECTION ── */
+.sponsors-section {
+  background: var(--sand);
+  padding: var(--sp-9) var(--sp-7);
+}
+
+.sponsors-section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.sponsors-section .section-lead {
+  margin-bottom: var(--sp-6);
+}
+
+
+/* ── TICKET CTA SECTION ── */
+.ticket-cta-section {
+  padding: var(--sp-9) var(--sp-7);
+  text-align: center;
+  background: var(--cream);
+}
+
+.ticket-cta-inner {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.ticket-cta-inner h2 {
+  margin-bottom: var(--sp-3);
+}
+
+.ticket-cta-inner p {
+  color: var(--muted);
+  font-size: 15.5px;
+  margin-bottom: var(--sp-5);
+}
+
+
+/* ── RESPONSIVE OVERRIDES ── */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsors-section {
+    padding: var(--sp-7) var(--sp-4);
+  }
+
+  .ticket-cta-section {
+    padding: var(--sp-7) var(--sp-4);
+  }
+}

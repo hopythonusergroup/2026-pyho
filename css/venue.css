@@ -1,0 +1,589 @@
+/* ============================================================
+   venue.css — PyHo 2026 · Venue page only
+   Loads after base.css. Zero duplication of base tokens/classes.
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   In-page subnav
+   ---------------------------------------------------------- */
+.venue-subnav {
+  position: sticky;
+  top: 64px; /* matches .site-nav height */
+  z-index: 90;
+  background: var(--forest);
+  border-bottom: 1px solid rgba(255, 212, 59, 0.18);
+}
+
+.venue-subnav__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.venue-subnav__inner::-webkit-scrollbar { display: none; }
+
+.venue-subnav__link {
+  display: inline-block;
+  padding: 0.875rem 1.25rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.62);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s, border-color 0.18s;
+  white-space: nowrap;
+}
+.venue-subnav__link:hover {
+  color: var(--cream);
+}
+.venue-subnav__link.active {
+  color: var(--yellow);
+  border-bottom-color: var(--yellow);
+}
+
+/* ----------------------------------------------------------
+   Page sections — shared wrapper
+   ---------------------------------------------------------- */
+.venue-section {
+  padding: 5rem 2rem;
+}
+.venue-section--alt {
+  background: var(--sage);
+}
+.venue-section--sand {
+  background: var(--sand);
+}
+
+.venue-section__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------------
+   Welcome to Ho — two-column intro
+   ---------------------------------------------------------- */
+.ho-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.ho-intro__lead {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  color: var(--forest);
+  margin: 0 0 1.5rem;
+}
+
+.ho-intro__body {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #3d3d3d;
+  margin: 0 0 1rem;
+}
+
+.ho-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ho-fact {
+  background: var(--forest);
+  color: var(--cream);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+}
+
+.ho-fact__number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--yellow);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.ho-fact__label {
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  opacity: 0.78;
+}
+
+/* Highlights list */
+.ho-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ho-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #3d3d3d;
+}
+
+.ho-highlights li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--yellow);
+  margin-top: 0.42em;
+  border: 1.5px solid var(--forest);
+}
+
+/* ----------------------------------------------------------
+   Conference Venue section
+   ---------------------------------------------------------- */
+.venue-card {
+  background: #fff;
+  border: 1px solid rgba(26, 58, 42, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(26, 58, 42, 0.06);
+}
+
+.venue-card__map-placeholder {
+  width: 100%;
+  height: 280px;
+  background: var(--sage);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(26, 58, 42, 0.08);
+}
+
+.venue-card__map-placeholder svg {
+  opacity: 0.35;
+}
+
+.venue-card__map-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--forest);
+  opacity: 0.5;
+}
+
+.venue-card__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+}
+
+.venue-card__info h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+}
+
+.venue-card__tbc {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7a6200;
+  background: #fff3b0;
+  border: 1px solid #e6c800;
+  border-radius: 4px;
+  padding: 0.18em 0.55em;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.venue-card__address {
+  font-size: 0.9375rem;
+  color: #555;
+  margin: 0.5rem 0 1.5rem;
+  line-height: 1.55;
+}
+
+.venue-facilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.venue-facilities li {
+  font-size: 0.875rem;
+  color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.venue-facilities li::before {
+  content: '✓';
+  font-weight: 700;
+  color: var(--forest);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.venue-capacity {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.venue-capacity__item {
+  background: var(--sage);
+  border-radius: 10px;
+  padding: 1.125rem 1.375rem;
+}
+
+.venue-capacity__item h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin: 0 0 0.25rem;
+  opacity: 0.7;
+}
+
+.venue-capacity__item p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   Getting Here section
+   ---------------------------------------------------------- */
+.transport-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.transport-card {
+  background: #fff;
+  border: 1px solid rgba(26, 58, 42, 0.1);
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.transport-card:hover {
+  box-shadow: 0 6px 24px rgba(26, 58, 42, 0.1);
+  transform: translateY(-2px);
+}
+
+.transport-card__icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.transport-card__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.625rem;
+}
+
+.transport-card__body {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+.transport-card__detail {
+  margin-top: 0.875rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid rgba(26, 58, 42, 0.08);
+  font-size: 0.8125rem;
+  color: var(--forest);
+  font-weight: 600;
+}
+
+.local-transport {
+  margin-top: 2.5rem;
+  background: var(--forest);
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+
+.local-transport__heading {
+  grid-column: 1 / -1;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--yellow);
+  margin: 0;
+}
+
+.local-transport__items {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.local-transport__item {
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
+}
+
+.local-transport__item-icon {
+  font-size: 1.375rem;
+  flex-shrink: 0;
+  margin-top: 0.1em;
+}
+
+.local-transport__item-text strong {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+}
+
+.local-transport__item-text span {
+  font-size: 0.8125rem;
+  color: rgba(247, 244, 238, 0.65);
+  line-height: 1.55;
+}
+
+/* ----------------------------------------------------------
+   Accommodation section
+   ---------------------------------------------------------- */
+.accommodation-intro {
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+}
+
+.accommodation-intro p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin: 0 0 1rem;
+}
+
+.hotel-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hotel-tier {
+  border: 1px solid rgba(26, 58, 42, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hotel-tier__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.75rem;
+  background: var(--forest);
+}
+
+.hotel-tier__badge {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25em 0.7em;
+  border-radius: 4px;
+}
+.hotel-tier__badge--budget {
+  background: rgba(255, 212, 59, 0.2);
+  color: var(--yellow);
+  border: 1px solid rgba(255, 212, 59, 0.4);
+}
+.hotel-tier__badge--mid {
+  background: rgba(232, 240, 224, 0.2);
+  color: #b4d4a0;
+  border: 1px solid rgba(180, 212, 160, 0.4);
+}
+.hotel-tier__badge--comfort {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hotel-tier__range {
+  margin-left: auto;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.hotel-tier__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin: 0;
+}
+
+.hotel-tier__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.hotel-listing {
+  padding: 1.375rem 1.75rem;
+  border-right: 1px solid rgba(26, 58, 42, 0.08);
+}
+.hotel-listing:last-child { border-right: none; }
+
+.hotel-listing__name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.3rem;
+}
+
+.hotel-listing__note {
+  font-size: 0.8125rem;
+  color: #555;
+  line-height: 1.55;
+  margin: 0 0 0.5rem;
+}
+
+.hotel-listing__distance {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--forest);
+  opacity: 0.55;
+  letter-spacing: 0.03em;
+}
+
+.accommodation-note {
+  margin-top: 2rem;
+}
+
+/* ----------------------------------------------------------
+   Section headings (venue-specific h2 treatment)
+   ---------------------------------------------------------- */
+.venue-section__heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.venue-section__sub {
+  font-size: 1.0625rem;
+  color: #555;
+  margin: 0 0 2.5rem;
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+/* ----------------------------------------------------------
+   Responsive
+   ---------------------------------------------------------- */
+@media (max-width: 900px) {
+  .ho-intro {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .ho-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .transport-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .venue-card__body {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-tier__body {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-listing {
+    border-right: none;
+    border-bottom: 1px solid rgba(26, 58, 42, 0.08);
+  }
+  .hotel-listing:last-child { border-bottom: none; }
+
+  .local-transport__items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .venue-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .transport-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ho-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .venue-subnav__link {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .local-transport {
+    padding: 1.5rem;
+  }
+
+  .hotel-tier__header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .hotel-tier__range {
+    margin-left: 0;
+    width: 100%;
+  }
+}

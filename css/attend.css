@@ -1,0 +1,971 @@
+/* ============================================================
+   attend.css — PyHo 2026 · Attend page only
+   Loads after base.css. Zero duplication of base tokens/classes.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   In-page subnav
+   ---------------------------------------------------------- */
+.attend-subnav {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 90;
+  background: var(--forest);
+  border-bottom: 1px solid rgba(255, 212, 59, 0.18);
+}
+
+.attend-subnav__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--sp-5);
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.attend-subnav__inner::-webkit-scrollbar { display: none; }
+
+.attend-subnav__link {
+  display: inline-block;
+  padding: 0.875rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.55);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s, border-color 0.18s;
+  white-space: nowrap;
+}
+.attend-subnav__link:hover { color: var(--cream); }
+.attend-subnav__link.active {
+  color: var(--yellow);
+  border-bottom-color: var(--yellow);
+}
+
+
+/* ----------------------------------------------------------
+   Philosophy banner — the "why paid tickets exist" explanation
+   Sits right below subnav, sets tone before tickets appear
+   ---------------------------------------------------------- */
+.philosophy-banner {
+  background: var(--forest);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 2.25rem var(--sp-5);
+}
+
+.philosophy-banner__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+
+.philosophy-banner__icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.philosophy-banner__text h2 {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 0.4rem;
+}
+
+.philosophy-banner__text p {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.62);
+  margin: 0;
+  line-height: 1.65;
+  max-width: 780px;
+}
+
+.philosophy-banner__text strong {
+  color: var(--yellow);
+  font-weight: 600;
+}
+
+
+/* ----------------------------------------------------------
+   Page sections
+   ---------------------------------------------------------- */
+.at-section {
+  padding: 5rem var(--sp-5);
+}
+
+.at-section--sage  { background: var(--sage); }
+.at-section--sand  { background: var(--sand); }
+.at-section--forest { background: var(--forest); }
+
+.at-section__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.at-section__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.at-section__heading--light { color: var(--white); }
+
+.at-section__sub {
+  font-size: 1.0625rem;
+  color: #555;
+  max-width: 620px;
+  line-height: 1.65;
+  margin: 0 0 3rem;
+}
+
+.at-section__sub--light { color: rgba(255, 255, 255, 0.6); }
+
+
+/* ----------------------------------------------------------
+   Ticket cards — 3-column grid
+   The key design challenge: Community Pass must not look lesser
+   than Builder/Patron. All three get equal structural weight;
+   differentiation is through colour accent only, not hierarchy.
+   ---------------------------------------------------------- */
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.ticket-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.ticket-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+/* Top accent bar — each tier gets its own colour via modifier */
+.ticket-card__accent {
+  height: 5px;
+  background: var(--tc-color, var(--forest));
+}
+
+.ticket-card--community .ticket-card__accent { background: #3D6B35; }
+.ticket-card--builder   .ticket-card__accent { background: var(--yellow); }
+.ticket-card--patron    .ticket-card__accent { background: #6D28D9; }
+
+/* Featured outline for the Patron card */
+.ticket-card--patron {
+  border-color: rgba(109, 40, 217, 0.25);
+}
+
+.ticket-card__header {
+  padding: 1.75rem 1.75rem 1.25rem;
+}
+
+.ticket-card__tier-tag {
+  font-family: var(--font-display);
+  font-size: 0.675rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25em 0.65em;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.ticket-card--community .ticket-card__tier-tag {
+  background: rgba(61, 107, 53, 0.1);
+  color: #2D5016;
+  border: 1px solid rgba(61, 107, 53, 0.2);
+}
+
+.ticket-card--builder .ticket-card__tier-tag {
+  background: rgba(255, 212, 59, 0.15);
+  color: #7a5f00;
+  border: 1px solid rgba(255, 212, 59, 0.35);
+}
+
+.ticket-card--patron .ticket-card__tier-tag {
+  background: rgba(109, 40, 217, 0.08);
+  color: #5b21b6;
+  border: 1px solid rgba(109, 40, 217, 0.2);
+}
+
+.ticket-card__name {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.375rem;
+}
+
+.ticket-card__purpose {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Price block */
+.ticket-card__price {
+  padding: 1.25rem 1.75rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.ticket-card__amount {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1;
+  display: block;
+}
+
+.ticket-card--community .ticket-card__amount { color: #2D5016; }
+.ticket-card--builder   .ticket-card__amount { color: var(--forest); }
+.ticket-card--patron    .ticket-card__amount { color: #5b21b6; }
+
+.ticket-card__price-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0.3rem 0 0;
+  line-height: 1.4;
+}
+
+/* Benefits list */
+.ticket-card__benefits {
+  padding: 1.375rem 1.75rem;
+  flex: 1;
+}
+
+.ticket-card__benefits-label {
+  font-family: var(--font-display);
+  font-size: 0.675rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.ticket-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.ticket-benefits-list li {
+  font-size: 0.875rem;
+  color: #3d3d3d;
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+.ticket-benefits-list li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-top: 0.48em;
+}
+
+.ticket-card--community .ticket-benefits-list li::before { background: #3D6B35; }
+.ticket-card--builder   .ticket-benefits-list li::before { background: #B45309; }
+.ticket-card--patron    .ticket-benefits-list li::before { background: #6D28D9; }
+
+/* CTA inside card */
+.ticket-card__cta {
+  padding: 1.25rem 1.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.ticket-card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.12s, opacity 0.15s;
+  line-height: 1;
+}
+
+.ticket-card--community .ticket-card__btn {
+  background: var(--sage);
+  color: var(--forest);
+  border: 1.5px solid rgba(61, 107, 53, 0.3);
+}
+.ticket-card--community .ticket-card__btn:hover {
+  background: #d5e8c8;
+  transform: translateY(-1px);
+}
+
+.ticket-card--builder .ticket-card__btn {
+  background: var(--yellow);
+  color: var(--forest);
+}
+.ticket-card--builder .ticket-card__btn:hover {
+  background: var(--yellow-dk);
+  transform: translateY(-1px);
+}
+
+.ticket-card--patron .ticket-card__btn {
+  background: #6D28D9;
+  color: #fff;
+}
+.ticket-card--patron .ticket-card__btn:hover {
+  background: #5b21b6;
+  transform: translateY(-1px);
+}
+
+
+/* ----------------------------------------------------------
+   Patron impact statement — sits below the ticket grid
+   "Your ticket helps another builder attend PyHo"
+   This is the page's signature element: a bold typographic
+   statement in the forest palette that reframes what paying means
+   ---------------------------------------------------------- */
+.patron-impact {
+  background: var(--forest);
+  border-radius: var(--radius-xl);
+  padding: 3rem 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.patron-impact::before {
+  content: '🐍';
+  position: absolute;
+  right: -0.5rem;
+  bottom: -1.5rem;
+  font-size: 9rem;
+  opacity: 0.05;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.patron-impact__quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+  margin: 0 0 0.75rem;
+}
+
+.patron-impact__quote em {
+  color: var(--yellow);
+  font-style: normal;
+}
+
+.patron-impact__sub {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.patron-impact__funds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  min-width: 200px;
+}
+
+.patron-fund-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.patron-fund-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Ticketing platform embed placeholder
+   ---------------------------------------------------------- */
+.embed-section {
+  margin-top: 3rem;
+}
+
+.embed-section__label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.embed-section__label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.embed-placeholder {
+  background: var(--white);
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.embed-placeholder__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.embed-placeholder__icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--forest);
+  fill: none;
+  stroke-width: 1.8;
+  opacity: 0.6;
+}
+
+.embed-placeholder__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0;
+}
+
+.embed-placeholder__sub {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 0;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.embed-placeholder__code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8125rem;
+  background: var(--sage);
+  color: var(--forest);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(26, 58, 42, 0.12);
+  opacity: 0.75;
+}
+
+
+/* ----------------------------------------------------------
+   Onsite information
+   ---------------------------------------------------------- */
+.onsite-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.onsite-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.625rem 1.5rem;
+  transition: box-shadow 0.18s;
+}
+
+.onsite-card:hover { box-shadow: var(--shadow-sm); }
+
+.onsite-card__icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.875rem;
+  display: block;
+}
+
+.onsite-card__title {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+}
+
+.onsite-card__body {
+  font-size: 0.875rem;
+  color: #4a4a4a;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.onsite-card__body a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Check-in timeline */
+.checkin-timeline {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.checkin-timeline__header {
+  background: var(--forest);
+  padding: 1rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkin-timeline__header h3 {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.checkin-timeline__header span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.checkin-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  border-bottom: 1px solid var(--border);
+}
+.checkin-row:last-child { border-bottom: none; }
+
+.checkin-row__time {
+  padding: 0.875rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--forest);
+  border-right: 1px solid var(--border);
+  background: var(--sage);
+  display: flex;
+  align-items: center;
+}
+
+.checkin-row__event {
+  padding: 0.875rem 1.5rem;
+  font-size: 0.875rem;
+  color: #3d3d3d;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+.checkin-row__event strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--forest);
+  margin-right: 0.35rem;
+}
+
+
+/* ----------------------------------------------------------
+   Travel grants
+   ---------------------------------------------------------- */
+.grants-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.grants-intro__lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--forest);
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+
+.grants-intro__body {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #3d3d3d;
+  margin: 0 0 0.875rem;
+}
+
+.grants-covers {
+  background: var(--forest);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.grants-covers h3 {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin: 0 0 1.125rem;
+}
+
+.grants-covers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.grants-covers-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.5;
+}
+
+.grants-covers-list li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  margin-top: 0.44em;
+  opacity: 0.7;
+}
+
+.grants-eligibility {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.eligibility-card {
+  border-radius: var(--radius-md);
+  padding: 1.375rem 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.eligibility-card--yes {
+  background: rgba(61, 107, 53, 0.06);
+  border-color: rgba(61, 107, 53, 0.18);
+}
+
+.eligibility-card--no {
+  background: rgba(239, 68, 68, 0.04);
+  border-color: rgba(239, 68, 68, 0.15);
+}
+
+.eligibility-card__header {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eligibility-card--yes .eligibility-card__header { color: #2D5016; }
+.eligibility-card--no  .eligibility-card__header { color: #991b1b; }
+
+.eligibility-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.eligibility-list li {
+  font-size: 0.875rem;
+  color: #3d3d3d;
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.eligibility-list li span.marker {
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 0.05em;
+}
+
+.eligibility-card--yes .marker { color: #2D5016; }
+.eligibility-card--no  .marker { color: #991b1b; }
+
+
+/* ----------------------------------------------------------
+   Travel grants FAQ
+   ---------------------------------------------------------- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:last-child { border-bottom: none; }
+
+/* Pure CSS accordion — no JS needed */
+.faq-item__toggle {
+  display: none;
+}
+
+.faq-item__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.75rem;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--forest);
+  transition: background 0.15s;
+}
+
+.faq-item__label:hover { background: var(--sage); }
+
+.faq-item__chevron {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.22s, background 0.15s;
+}
+
+.faq-item__chevron svg {
+  width: 10px;
+  height: 10px;
+  stroke: var(--forest);
+  fill: none;
+  stroke-width: 2;
+}
+
+.faq-item__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease;
+}
+
+.faq-item__content {
+  padding: 0 1.75rem 1.375rem;
+  font-size: 0.9375rem;
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+.faq-item__content p { margin: 0 0 0.75rem; }
+.faq-item__content p:last-child { margin: 0; }
+
+.faq-item__content ul {
+  padding-left: 1.125rem;
+  margin: 0.5rem 0 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.faq-item__content ul li {
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  line-height: 1.55;
+}
+
+.faq-item__content a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Open state */
+.faq-item__toggle:checked + .faq-item__label { background: var(--sage); }
+
+.faq-item__toggle:checked + .faq-item__label .faq-item__chevron {
+  transform: rotate(180deg);
+  background: var(--yellow);
+}
+
+.faq-item__toggle:checked + .faq-item__label .faq-item__chevron svg {
+  stroke: var(--forest);
+}
+
+.faq-item__toggle:checked ~ .faq-item__body {
+  max-height: 600px;
+}
+
+/* Grants apply CTA */
+.grants-apply {
+  margin-top: 2.5rem;
+  background: var(--sage);
+  border: 1px solid rgba(26, 58, 42, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.grants-apply__copy h3 {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.3rem;
+}
+
+.grants-apply__copy p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.grants-apply__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--forest);
+  background: var(--yellow);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background 0.15s, transform 0.12s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.grants-apply__btn:hover {
+  background: var(--yellow-dk);
+  transform: translateY(-1px);
+}
+
+
+/* ----------------------------------------------------------
+   Responsive
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .onsite-grid { grid-template-columns: repeat(2, 1fr); }
+  .tickets-grid { grid-template-columns: repeat(2, 1fr); }
+  .ticket-card--patron { grid-column: span 2; }
+}
+
+@media (max-width: 900px) {
+  .grants-intro { grid-template-columns: 1fr; gap: 1.75rem; }
+  .patron-impact { grid-template-columns: 1fr; gap: 1.5rem; }
+  .patron-impact::before { display: none; }
+}
+
+@media (max-width: 768px) {
+  .at-section { padding: 3.5rem var(--sp-4); }
+  .tickets-grid { grid-template-columns: 1fr; }
+  .ticket-card--patron { grid-column: auto; }
+  .onsite-grid { grid-template-columns: 1fr; }
+  .grants-eligibility { grid-template-columns: 1fr; }
+  .philosophy-banner__inner { grid-template-columns: auto 1fr; }
+  .faq-item__label { font-size: 0.9375rem; padding: 1.125rem 1.375rem; }
+  .faq-item__content { padding: 0 1.375rem 1.25rem; }
+}
+
+@media (max-width: 600px) {
+  .attend-subnav__link { padding: 0.75rem 1rem; font-size: 0.75rem; }
+  .patron-impact { padding: 2rem 1.75rem; }
+  .grants-apply { flex-direction: column; align-items: flex-start; }
+  .grants-apply__btn { width: 100%; justify-content: center; }
+  .checkin-row { grid-template-columns: 80px 1fr; }
+}

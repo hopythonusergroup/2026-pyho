@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speaking at PyHo 2026 · Python Conference, Ho, Ghana</title>
+  <meta name="description" content="Submit a talk proposal for PyHo 2026. We're looking for practical Python talks, workshops, and community stories across 5 topic tracks. Conference day: October 24, 2026, Ho, Ghana." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/speaking.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     NAVIGATION
+     ════════════════════════════════════════════ -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+
+  <a href="../index.html" class="nav-logo" aria-label="PyHo 2026 — Home">
+    <img src="../images/pyho2026-logo.png" alt="PyHo 2026">
+  </a>
+
+  <ul class="nav-links" id="navLinks" role="list">
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        About
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="about.html"              role="menuitem">About PyHo</a>
+        <a href="about.html#psf"          role="menuitem">Python Software Foundation</a>
+        <a href="about.html#coc"          role="menuitem">Code of Conduct</a>
+        <a href="about.html#diversity"    role="menuitem">Diversity &amp; Inclusion</a>
+        <a href="about.html#health-safety" role="menuitem">Health &amp; Safety</a>
+        <div class="dropdown-divider"></div>
+        <a href="about.html#organizers"   role="menuitem">Organizers</a>
+        <a href="about.html#faq"          role="menuitem">FAQ</a>
+        <a href="builders-lab.html"       role="menuitem">Builders Lab Sprint</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Venue
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="venue.html"               role="menuitem">Welcome to Ho</a>
+        <a href="venue.html#venue"         role="menuitem">Conference Venue</a>
+        <a href="venue.html#getting-here"  role="menuitem">Getting Here</a>
+        <a href="venue.html#accommodation" role="menuitem">Accommodation</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Sponsor
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="sponsors.html#why-sponsor"  role="menuitem">Why Sponsor</a>
+        <a href="our-sponsors.html" role="menuitem">Our Sponsors</a>
+        <a href="../files/pyho2026-sponsorship-prospectus.pdf" target="_blank" rel="noopener" role="menuitem">Sponsorship Prospectus</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Speaking
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="speaking.html"           role="menuitem">Speaking at PyHo</a>
+        <a href="speaking.html#resources" role="menuitem">Speaker Resources</a>
+        <a href="speaking.html#submit"    role="menuitem">Submit a Talk</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a href="attend.html">Attend</a>
+    </li>
+
+    <!-- <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Schedule
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="schedule.html#django-girls" role="menuitem">Django Girls Ho — Oct 22–23</a>
+        <a href="schedule.html#builders-lab" role="menuitem">Builders Lab Sprint — Oct 23</a>
+        <a href="schedule.html#talks"        role="menuitem">Talks — Oct 24</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Volunteer
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="volunteer.html"       role="menuitem">Volunteering at PyHo</a>
+        <a href="volunteer.html#apply" role="menuitem">Apply to Volunteer</a>
+      </div>
+    </li> -->
+
+  </ul>
+
+  <a href="attend.html" class="nav-cta">Buy Ticket</a>
+
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+
+</nav>
+
+
+<!-- ════════════════════════════════════════════
+     PAGE HERO
+     ════════════════════════════════════════════ -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <span>Speaking</span>
+    </nav>
+    <span class="eyebrow" style="color: rgba(255,212,59,0.75);">PyHo 2026 · October 24, Ho</span>
+    <h1>Speak at PyHo 2026</h1>
+    <p class="page-hero-lead">Share what you're building, learning, or discovering with 200+ Python practitioners from Ghana and across West Africa.</p>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════════
+     IN-PAGE SUBNAV
+     ════════════════════════════════════════════ -->
+<nav class="speaking-subnav" aria-label="Page sections">
+  <div class="speaking-subnav__inner">
+    <a href="#speaking"  class="speaking-subnav__link">Speaking at PyHo</a>
+    <a href="#tracks"    class="speaking-subnav__link">Talk Tracks</a>
+    <a href="#resources" class="speaking-subnav__link">Speaker Resources</a>
+    <a href="#submit"    class="speaking-subnav__link">Submit a Talk</a>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════
+     CFS OPEN BANNER
+     ════════════════════════════════════════════ -->
+<div class="cfs-banner" role="complementary" aria-label="Call for speakers status">
+  <span class="cfs-banner__pill">
+    <span class="cfs-banner__dot" aria-hidden="true"></span>
+    CFS Open
+  </span>
+  <span class="cfs-banner__text"><strong>Call for Speakers is open.</strong> Proposals are reviewed on a rolling basis — submit early for best consideration.</span>
+  <a href="https://sessionize.com/pyho-2026/" target="_blank" rel="noopener" class="cfs-banner__cta">
+    Submit on Sessionize →
+  </a>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     SPEAKING AT PYHO — WHY SPEAK
+     ════════════════════════════════════════════ -->
+<section class="sp-section" id="speaking">
+  <div class="sp-section__inner">
+    <span class="eyebrow">Why Speak</span>
+    <h2 class="sp-section__heading">Why speak at PyHo 2026?</h2>
+    <p class="sp-section__sub">PyHo is one of the most engaged Python communities on the continent. When you take the stage in Ho, you're not just giving a talk — you're contributing to an ecosystem that's actively growing.</p>
+
+    <div class="why-speak-grid">
+
+      <div class="why-card">
+        <span class="why-card__icon">🌍</span>
+        <h3 class="why-card__title">A genuinely regional audience</h3>
+        <p class="why-card__body">Your talk reaches developers from across the Volta Region, Greater Accra, Kumasi, and neighbouring countries — practitioners who are hungry for real-world Python content that speaks to their context.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-card__icon">🤝</span>
+        <h3 class="why-card__title">Build lasting connections</h3>
+        <p class="why-card__body">PyHo is small enough that speakers actually meet the audience. Hallway conversations, the sprint the day before, the dinner after — there's real community here, not just a nameplate on a lanyard.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-card__icon">🎙️</span>
+        <h3 class="why-card__title">All experience levels welcome</h3>
+        <p class="why-card__body">First-time speakers stand alongside veterans. We actively look for talks from people who haven't spoken at a conference before — your perspective from the field is what the audience came to hear.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-card__icon">📼</span>
+        <h3 class="why-card__title">Your talk lives beyond the day</h3>
+        <p class="why-card__body">Talks are recorded and shared on the PyHo YouTube channel, extending your reach to the broader African Python community and beyond long after October 24.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-card__icon">✈️</span>
+        <h3 class="why-card__title">Speaker support</h3>
+        <p class="why-card__body">Accepted speakers receive complimentary conference access. We work with sponsors to offer limited travel support for speakers who need it — reach out after acceptance to discuss.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-card__icon">🐍</span>
+        <h3 class="why-card__title">PSF-connected community</h3>
+        <p class="why-card__body">PyHo operates in partnership with the Python Software Foundation, placing your talk within a global community that values your contribution to Python's growth in Africa.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     CONFERENCE FORMAT
+     ════════════════════════════════════════════ -->
+<section class="sp-section sp-section--sage">
+  <div class="sp-section__inner">
+    <span class="eyebrow">Main Conference Day · October 24, 2026</span>
+    <h2 class="sp-section__heading">Talk formats</h2>
+    <p class="sp-section__sub">We have two talk lengths on the main conference day. Choose the format that fits what you want to say.</p>
+
+    <div class="format-grid">
+
+      <div class="format-card format-card--main">
+        <span class="format-card__duration">25</span>
+        <span class="format-card__unit">minutes</span>
+        <h3 class="format-card__name">Conference Talk</h3>
+        <p class="format-card__desc">The standard format for PyHo 2026. Enough time to establish context, walk through a real problem or technique, show code, and leave the audience with something actionable. Includes a short Q&A after the session.</p>
+        <span class="format-card__tag">Primary format</span>
+      </div>
+
+      <div class="format-card format-card--lightning">
+        <span class="format-card__duration">5</span>
+        <span class="format-card__unit">minutes</span>
+        <h3 class="format-card__name">Lightning Talk</h3>
+        <p class="format-card__desc">Sharp, focused, and fast. Lightning talks are perfect for sharing a single idea, a tool you've built, a lesson you've learned, or a project you want the community to know about. No Q&A — the clock rules.</p>
+        <span class="format-card__tag">Speed format</span>
+      </div>
+
+    </div>
+
+    <!-- Proposing a talk -->
+    <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--forest); margin: 3rem 0 1.25rem;">Proposing a talk</h3>
+
+    <div class="proposal-steps">
+      <div class="proposal-step">
+        <div class="proposal-step__num">1</div>
+        <div class="proposal-step__content">
+          <h4 class="proposal-step__title">Pick your topic and format</h4>
+          <p class="proposal-step__body">Choose a talk (25 min) or lightning talk (5 min). Review the five talk tracks below to see where your idea fits best — one track per proposal. You can submit more than one proposal.</p>
+        </div>
+      </div>
+      <div class="proposal-step">
+        <div class="proposal-step__num">2</div>
+        <div class="proposal-step__content">
+          <h4 class="proposal-step__title">Write a clear abstract</h4>
+          <p class="proposal-step__body">Tell us what the audience will learn, who it's for (beginner / intermediate / advanced), and why it matters in a Python context. Be specific — "I'll show how we cut our API latency by 60% using async task queues" is better than "I'll talk about performance." Avoid jargon that obscures the actual content.</p>
+        </div>
+      </div>
+      <div class="proposal-step">
+        <div class="proposal-step__num">3</div>
+        <div class="proposal-step__content">
+          <h4 class="proposal-step__title">Submit on Sessionize</h4>
+          <p class="proposal-step__body">All proposals go through <a href="https://sessionize.com/pyho-2026/" target="_blank" rel="noopener">sessionize.com/pyho-2026</a>. You'll need a free Sessionize account. Fill in the talk title, abstract, track, format, and your speaker bio. Proposals are reviewed by the programme committee on a rolling basis.</p>
+        </div>
+      </div>
+      <div class="proposal-step">
+        <div class="proposal-step__num">4</div>
+        <div class="proposal-step__content">
+          <h4 class="proposal-step__title">Wait for the decision</h4>
+          <p class="proposal-step__body">The programme committee reviews each proposal for relevance, clarity, and fit with the overall programme. You'll receive a decision by email. If your talk is not accepted, we'll let you know — submitting again in future years is always welcome.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box note-box-yellow" style="margin-top: 1.25rem;">
+      <strong>Questions about your proposal?</strong> Email the programme team at <a href="mailto:ho@pythonghana.org" style="color: var(--forest); font-weight: 600;">ho@pythonghana.org</a> — we're happy to give feedback on a draft abstract before you submit.
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     TALK TRACKS
+     ════════════════════════════════════════════ -->
+<section class="sp-section" id="tracks">
+  <div class="sp-section__inner">
+    <span class="eyebrow">What We're Looking For</span>
+    <h2 class="sp-section__heading">Talk tracks</h2>
+    <p class="sp-section__sub">We're looking for engaging talks, practical workshops, and community discussions that highlight real-world applications of Python, emerging technologies, and impactful stories from the ecosystem. Proposals should fit one of these five tracks.</p>
+
+    <div class="tracks-grid">
+
+      <!-- Track 1 — AI & ML -->
+      <div class="track-card">
+        <div class="track-card__stripe" style="--track-color: #0F766E;"></div>
+        <div class="track-card__body">
+          <span class="track-card__number" style="--track-color: #0F766E;">Track 1</span>
+          <h3 class="track-card__title">AI &amp; Machine Learning Applications</h3>
+          <p class="track-card__tagline">Practical AI systems built with Python.</p>
+          <ul class="track-topics" style="--track-color: #0F766E;">
+            <li>LLM integrations and AI agents</li>
+            <li>Building AI products with Python</li>
+            <li>MLOps and deploying ML models</li>
+            <li>Responsible and ethical AI systems</li>
+            <li>Real-world AI case studies</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 2 — Automation -->
+      <div class="track-card">
+        <div class="track-card__stripe" style="--track-color: #B45309;"></div>
+        <div class="track-card__body">
+          <span class="track-card__number" style="--track-color: #B45309;">Track 2</span>
+          <h3 class="track-card__title">Automation &amp; Developer Productivity</h3>
+          <p class="track-card__tagline">Using Python to automate systems, workflows, and infrastructure.</p>
+          <ul class="track-topics" style="--track-color: #B45309;">
+            <li>Automation scripts and pipelines</li>
+            <li>DevOps with Python</li>
+            <li>Task orchestration and background workers</li>
+            <li>Productivity tools for developers</li>
+            <li>Workflow automation for businesses</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 3 — Web & Product -->
+      <div class="track-card">
+        <div class="track-card__stripe" style="--track-color: #1A3A2A;"></div>
+        <div class="track-card__body">
+          <span class="track-card__number" style="--track-color: #1A3A2A;">Track 3</span>
+          <h3 class="track-card__title">Web &amp; Product Engineering</h3>
+          <p class="track-card__tagline">Building scalable applications and platforms.</p>
+          <ul class="track-topics" style="--track-color: #1A3A2A;">
+            <li>Django and FastAPI systems</li>
+            <li>API architecture and design</li>
+            <li>Backend engineering patterns</li>
+            <li>SaaS and product development</li>
+            <li>Scaling Python applications</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 4 — Data Systems -->
+      <div class="track-card">
+        <div class="track-card__stripe" style="--track-color: #4338CA;"></div>
+        <div class="track-card__body">
+          <span class="track-card__number" style="--track-color: #4338CA;">Track 4</span>
+          <h3 class="track-card__title">Data Systems &amp; Intelligent Platforms</h3>
+          <p class="track-card__tagline">Transforming data into usable systems.</p>
+          <ul class="track-topics" style="--track-color: #4338CA;">
+            <li>Data pipelines and data engineering</li>
+            <li>Analytics platforms</li>
+            <li>Python for data products</li>
+            <li>Distributed data processing</li>
+            <li>Real-time systems</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 5 — Emerging -->
+      <div class="track-card">
+        <div class="track-card__stripe" style="--track-color: #BE185D;"></div>
+        <div class="track-card__body">
+          <span class="track-card__number" style="--track-color: #BE185D;">Track 5</span>
+          <h3 class="track-card__title">Emerging Python Applications</h3>
+          <p class="track-card__tagline">Exploring Python beyond traditional use cases.</p>
+          <ul class="track-topics" style="--track-color: #BE185D;">
+            <li>IoT and robotics with Python</li>
+            <li>Cybersecurity tools</li>
+            <li>Blockchain / Web3 development</li>
+            <li>Scientific computing</li>
+            <li>New Python frameworks and tools</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Invite card — 5 tracks + this "open" card = 6-grid fits cleanly -->
+      <div class="track-card" style="border-style: dashed; border-color: var(--border-strong); background: transparent; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem; gap: 0.75rem;">
+        <span style="font-size: 2rem;">💡</span>
+        <p style="font-family: var(--font-display); font-size: 0.9375rem; font-weight: 700; color: var(--forest); margin: 0;">Have something that doesn't fit neatly?</p>
+        <p style="font-size: 0.875rem; color: #555; margin: 0; line-height: 1.6;">Submit it anyway. If your talk is compelling and Python-related, we want to hear it. Email us to discuss.</p>
+        <a href="mailto:ho@pythonghana.org" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--forest); text-decoration: underline; text-underline-offset: 2px;">ho@pythonghana.org</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SPEAKER RESOURCES
+     ════════════════════════════════════════════ -->
+<section class="sp-section sp-section--sand" id="resources">
+  <div class="sp-section__inner">
+    <span class="eyebrow">Speaker Resources</span>
+    <h2 class="sp-section__heading">Slide guides &amp; resources</h2>
+    <p class="sp-section__sub">Once your talk is accepted, use these guidelines to prepare your slides. Following them helps your presentation look great on the day and stay accessible to everyone in the room.</p>
+
+    <div class="resources-grid">
+
+      <!-- Slide format -->
+      <div class="resource-block">
+        <span class="resource-block__icon">📐</span>
+        <h3 class="resource-block__title">Slide format</h3>
+        <p class="resource-block__sub">Technical requirements for the presentation display at the conference venue.</p>
+
+        <ul class="resource-list">
+          <li class="resource-item">
+            <span class="resource-item__label">Aspect ratio</span>
+            <p class="resource-item__value">16:9 widescreen. Do not use 4:3 — it will letterbox on the conference display.</p>
+          </li>
+          <li class="resource-item">
+            <span class="resource-item__label">Resolution</span>
+            <p class="resource-item__value">1920 × 1080 px (Full HD). Export at this resolution for crispest projection.</p>
+          </li>
+          <li class="resource-item">
+            <span class="resource-item__label">Format</span>
+            <p class="resource-item__value"><code>.pptx</code> or <code>.pdf</code> preferred. Google Slides is accepted; bring the link and a PDF backup.</p>
+          </li>
+          <li class="resource-item">
+            <span class="resource-item__label">File handoff</span>
+            <p class="resource-item__value">Upload your slides to the speaker portal link (shared on acceptance) at least 48 hours before the conference. A/V team will preload all talks.</p>
+          </li>
+          <li class="resource-item">
+            <span class="resource-item__label">Fonts</span>
+            <p class="resource-item__value">Embed all fonts or export as PDF to avoid substitution. System fonts (<code>Arial</code>, <code>Roboto</code>) are safe without embedding.</p>
+          </li>
+          <li class="resource-item">
+            <span class="resource-item__label">Laptop</span>
+            <p class="resource-item__value">Bring your own laptop as a backup. We will have an HDMI adapter on stage; USB-C and Mini DisplayPort adapters available on request.</p>
+          </li>
+          <li class="resource-item">
+            <span class="resource-item__label">Code demos</span>
+            <p class="resource-item__value">Use dark-theme code editors for live demos — they project more clearly. Increase terminal font size to at least 20 px before walking on stage.</p>
+          </li>
+        </ul>
+
+        <div class="resource-note">
+          <strong>Template coming soon.</strong> A branded PyHo 2026 slide template will be shared with accepted speakers via the speaker portal.
+        </div>
+      </div>
+
+      <!-- Accessibility -->
+      <div class="resource-block">
+        <span class="resource-block__icon">♿</span>
+        <h3 class="resource-block__title">Accessibility</h3>
+        <p class="resource-block__sub">Making your slides accessible helps everyone follow along — including attendees with visual impairments, colour blindness, or who are watching the recorded video.</p>
+
+        <ul class="a11y-checklist">
+          <li>
+            <span class="a11y-check" aria-hidden="true">
+              <svg viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 1.5"/></svg>
+            </span>
+            <span><strong>Use high contrast.</strong> Text and background should have a contrast ratio of at least 4.5:1. Dark text on light slides, or light text on dark slides — not medium grey on white.</span>
+          </li>
+          <li>
+            <span class="a11y-check" aria-hidden="true">
+              <svg viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 1.5"/></svg>
+            </span>
+            <span><strong>Minimum 24 px body text.</strong> Audience members at the back of the room need to read your slides comfortably. If it feels big, it's probably right.</span>
+          </li>
+          <li>
+            <span class="a11y-check" aria-hidden="true">
+              <svg viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 1.5"/></svg>
+            </span>
+            <span><strong>Don't rely on colour alone.</strong> Use shapes, labels, or patterns alongside colour to convey meaning — roughly 8% of men have some form of colour vision deficiency.</span>
+          </li>
+          <li>
+            <span class="a11y-check" aria-hidden="true">
+              <svg viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 1.5"/></svg>
+            </span>
+            <span><strong>Add alt text to images.</strong> In PowerPoint and Google Slides, right-click images and add descriptive alt text. This benefits screen readers on the uploaded version.</span>
+          </li>
+          <li>
+            <span class="a11y-check" aria-hidden="true">
+              <svg viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 1.5"/></svg>
+            </span>
+            <span><strong>One idea per slide.</strong> Dense slides slow comprehension and are harder to follow for non-native English speakers. Say the complexity out loud; keep the slide clean.</span>
+          </li>
+          <li>
+            <span class="a11y-check" aria-hidden="true">
+              <svg viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 1.5"/></svg>
+            </span>
+            <span><strong>Avoid flashing animations.</strong> Rapid flashing content (more than 3 times per second) can trigger photosensitive responses. Use transitions sparingly.</span>
+          </li>
+          <li>
+            <span class="a11y-check" aria-hidden="true">
+              <svg viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 1.5"/></svg>
+            </span>
+            <span><strong>Speak to the room, not the screen.</strong> Face the audience when you speak. Repeat questions aloud before answering so the recording captures them.</span>
+          </li>
+          <li>
+            <span class="a11y-check" aria-hidden="true">
+              <svg viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 1.5"/></svg>
+            </span>
+            <span><strong>Use readable code fonts.</strong> For code slides, use a monospace font at 20 px minimum. Highlight the line you're talking about rather than letting the audience scan.</span>
+          </li>
+        </ul>
+
+        <div class="resource-note" style="margin-top: 1.25rem;">
+          <strong>Questions about accessibility?</strong> Reach out to <a href="mailto:ho@pythonghana.org" style="color: var(--forest); font-weight:600;">ho@pythonghana.org</a> and we'll help you review your slides before the event.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SUBMIT CTA
+     ════════════════════════════════════════════ -->
+<div class="submit-cta" id="submit">
+  <div class="submit-cta__inner">
+    <div>
+      <h2 class="submit-cta__heading">Submit your talk now</h2>
+      <p class="submit-cta__sub">Speakers will have the opportunity to share knowledge, connect with a vibrant audience, and contribute to one of Africa's most exciting Python gatherings. Join us on October 23–24, 2026 in Ho, Volta, Ghana.</p>
+      <p class="submit-cta__deadline">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Proposals reviewed on a rolling basis · Conference day October 24, 2026
+      </p>
+    </div>
+    <div class="submit-cta__actions">
+      <a href="https://sessionize.com/pyho-2026/" target="_blank" rel="noopener" class="btn-submit">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Submit on Sessionize
+      </a>
+      <p class="submit-cta__contact">
+        Questions? Email <a href="mailto:ho@pythonghana.org">ho@pythonghana.org</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     ORGANIZER STRIP
+     ════════════════════════════════════════════ -->
+<div class="organizer-strip">
+  <p>The PyHo 2026 Builders Conference is organized by the <strong>Python User Group Ho</strong></p>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <img src="../images/pyho2026-logo.png" alt="PyHo 2026">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Python User Group Ho. PyHo 2026 is a community event.</p>
+
+      <div class="footer-socials" aria-label="Social media links">
+
+        <!-- X / Twitter -->
+        <a href="https://x.com/PythonHo" target="_blank" rel="noopener" aria-label="PyHo on X (Twitter)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/pythonho" target="_blank" rel="noopener" aria-label="PyHo on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/hopythonusergroup" target="_blank" rel="noopener" aria-label="PyHo on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@PythonHo" target="_blank" rel="noopener" aria-label="PyHo on YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../js/site.js"></script>
+
+<!-- ════════════════════════════════════════════
+     PAGE JS — scroll spy for subnav active state
+     ════════════════════════════════════════════ -->
+<script>
+(function () {
+  var OFFSET = 120;
+
+  var sections = [
+    document.getElementById('speaking'),
+    document.getElementById('tracks'),
+    document.getElementById('resources'),
+    document.getElementById('submit'),
+  ].filter(Boolean);
+
+  var links = Array.from(document.querySelectorAll('.speaking-subnav__link'));
+
+  function getActive() {
+    for (var i = sections.length - 1; i >= 0; i--) {
+      if (sections[i].getBoundingClientRect().top <= OFFSET) {
+        return sections[i].id;
+      }
+    }
+    return sections[0] ? sections[0].id : null;
+  }
+
+  function update() {
+    var activeId = getActive();
+    links.forEach(function (link) {
+      var href = link.getAttribute('href').replace('#', '');
+      link.classList.toggle('active', href === activeId);
+    });
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        update();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  update();
+}());
+</script>
+
+</body>
+</html>

@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About PyHo 2026 — The Builders Conference. Learn about our mission, values, organizers, code of conduct, and commitment to diversity and inclusion.">
+  <meta property="og:title"       content="About — PyHo 2026">
+  <meta property="og:description" content="PyHo is the annual Python conference for Ho, the Volta Region, and the wider Ghana developer community.">
+  <meta property="og:type"        content="website">
+  <title>About — PyHo 2026 · The Builders Conference</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     NAVIGATION
+     ════════════════════════════════════════════ -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+
+  <a href="../index.html" class="nav-logo" aria-label="PyHo 2026 — Home">
+    <img src="../images/pyho2026-logo.png" alt="PyHo 2026">
+  </a>
+
+  <ul class="nav-links" id="navLinks" role="list">
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        About
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="about.html"              role="menuitem">About PyHo</a>
+        <a href="about.html#psf"          role="menuitem">Python Software Foundation</a>
+        <a href="about.html#coc"          role="menuitem">Code of Conduct</a>
+        <a href="about.html#diversity"    role="menuitem">Diversity &amp; Inclusion</a>
+        <a href="about.html#health-safety" role="menuitem">Health &amp; Safety</a>
+        <div class="dropdown-divider"></div>
+        <a href="about.html#organizers"   role="menuitem">Organizers</a>
+        <a href="about.html#faq"          role="menuitem">FAQ</a>
+        <a href="builders-lab.html"       role="menuitem">Builders Lab Sprint</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Venue
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="venue.html"          role="menuitem">Welcome to Ho</a>
+        <a href="venue.html#venue"                  role="menuitem">Conference Venue</a>
+        <a href="venue.html#getting-here"     role="menuitem">Getting Here</a>
+        <a href="venue.html#accommodation"    role="menuitem">Accommodation</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Sponsor
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="sponsors.html#why-sponsor"  role="menuitem">Why Sponsor</a>
+        <a href="our-sponsors.html" role="menuitem">Our Sponsors</a>
+        <a href="../files/PyHo-2026-Sponsorship_Prospectus_23_24_2026.pdf" target="_blank" rel="noopener" role="menuitem">Sponsorship Prospectus</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Speaking
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="speaking.html"           role="menuitem">Speaking at PyHo</a>
+        <a href="speaking.html#resources" role="menuitem">Speaker Resources</a>
+        <a href="speaking.html#submit"    role="menuitem">Submit a Talk</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a href="attend.html">Attend</a>
+    </li>
+
+    <!-- <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Schedule
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="schedule.html#django-girls" role="menuitem">Django Girls Ho — Oct 22–23</a>
+        <a href="schedule.html#builders-lab" role="menuitem">Builders Lab Sprint — Oct 23</a>
+        <a href="schedule.html#talks"        role="menuitem">Talks — Oct 24</a>
+      </div>
+    </li>
+
+    <li class="nav-item" data-dropdown>
+      <button aria-haspopup="true" aria-expanded="false">
+        Volunteer
+        <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown" role="menu">
+        <a href="volunteer.html"        role="menuitem">Volunteering at PyHo</a>
+        <a href="volunteer.html#apply"  role="menuitem">Apply to Volunteer</a>
+      </div>
+    </li> -->
+
+  </ul>
+
+  <a href="attend.html" class="nav-cta">Buy Ticket</a>
+
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+
+</nav>
+<!-- /NAVIGATION -->
+
+
+<!-- ════════════════════════════════════════════
+     PAGE HERO
+     ════════════════════════════════════════════ -->
+<header class="page-hero page-hero-about" role="banner">
+  <div class="page-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>About</span>
+    </nav>
+    <h1>About PyHo</h1>
+    <p class="page-hero-lead">The annual Python conference for Ho, the Volta Region, and the wider Ghana developer community. Two days. Real builders. One community.</p>
+  </div>
+</header>
+<!-- /PAGE HERO -->
+
+<!-- Mountain divider -->
+<div class="mountain-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 48" preserveAspectRatio="none" fill="#F7F4EE" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,48 L0,28 L80,12 L180,26 L300,8 L420,22 L540,4 L660,20 L780,6 L900,18 L1020,8 L1140,24 L1260,10 L1380,22 L1440,14 L1440,48 Z"/>
+  </svg>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     IN-PAGE SUB-NAVIGATION
+     ════════════════════════════════════════════ -->
+<div class="about-subnav" role="navigation" aria-label="About sections">
+  <div class="about-subnav-inner">
+    <a href="#about-pyho"     class="active">About PyHo</a>
+    <a href="#psf">Python Software Foundation</a>
+    <a href="#coc">Code of Conduct</a>
+    <a href="#diversity">Diversity &amp; Inclusion</a>
+    <a href="#health-safety">Health &amp; Safety</a>
+    <a href="#organizers">Organizers</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     § ABOUT PYHO
+     ════════════════════════════════════════════ -->
+<section id="about-pyho" class="section" aria-labelledby="about-pyho-heading">
+  <div class="about-intro-grid">
+
+    <div>
+      <span class="eyebrow">Who We Are</span>
+      <p class="about-pull-quote">
+        "A conference built by the community, for the community — in the heart of the Volta Region."
+      </p>
+    </div>
+
+    <div class="about-intro-body">
+      <p>PyHo is the annual Python conference organized by the <strong>Python User Group Ho</strong> — a grassroots community of developers, builders, students, and open-source contributors based in Ho, Ghana's Volta Region.</p>
+      <p>The conference brings together Python enthusiasts of all experience levels for two days of learning, building, and connecting. Whether you've been writing Python for a decade or you're curious about what it even is — PyHo is for you.</p>
+      <p>PyHo 2026 is our most ambitious edition yet. We're introducing the <strong>Builders Lab Sprint</strong> — a new day-long hands-on track where developers team up to ship real things — alongside the beloved Django Girls Ho workshop and a full day of community-selected talks.</p>
+      <a href="../index.html#events" class="link-arrow">See the full program →</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- ════════════════════════════════════════════
+     STATS BAND
+     ════════════════════════════════════════════ -->
+<div class="stats-band" role="region" aria-label="Conference at a glance">
+  <div class="stats-band-inner">
+    <div class="stat-item">
+      <div class="stat-number">200+</div>
+      <div class="stat-label">Attendees</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">2</div>
+      <div class="stat-label">Conference Days</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">15+</div>
+      <div class="stat-label">Talks &amp; Sessions</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Events in One Weekend</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     VALUES / PILLARS
+     ════════════════════════════════════════════ -->
+<section class="section" aria-labelledby="values-heading">
+  <span class="eyebrow">What We Stand For</span>
+  <h2 id="values-heading">Our Values</h2>
+  <p class="section-lead">Every decision we make at PyHo — from how we select talks to how we price tickets — comes back to these principles.</p>
+
+  <div class="values-grid">
+
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+      </div>
+      <h3>Community First</h3>
+      <p>PyHo exists because of volunteers — people who give their time, skills, and energy to build something meaningful for the local developer community. The conference is by the community, for the community.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3>Radical Inclusion</h3>
+      <p>We actively work to ensure that PyHo reflects the full diversity of our community — across gender, background, experience level, and discipline. Everyone belongs here.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <h3>Builders Over Spectators</h3>
+      <p>We believe the best learning happens when you make things. That's why the 2026 edition introduces the Builders Lab Sprint — because talking about code matters, but shipping it matters more.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <h3>Local Roots, Global Standards</h3>
+      <p>PyHo is deeply rooted in Ho and the Volta Region, but we hold ourselves to the same standards as the best Python conferences anywhere in the world — in content quality, safety, and experience.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Safety &amp; Respect</h3>
+      <p>Every attendee, speaker, sponsor, and volunteer deserves to feel safe and respected. Our Code of Conduct is not optional — it applies to everyone, everywhere at PyHo, without exception.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <h3>Transparency</h3>
+      <p>We are open about how talks are selected, how the budget is managed, and how decisions are made. We publish our processes so the community can hold us accountable and improve over time.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- ════════════════════════════════════════════
+     § PYTHON SOFTWARE FOUNDATION
+     ════════════════════════════════════════════ -->
+<section id="psf" class="section" aria-labelledby="psf-heading">
+  <div class="psf-grid">
+
+    <div class="psf-logo-block" role="img" aria-label="Python Software Foundation logo block">
+      <div class="psf-logo-wordmark">
+        <span>PSF</span>
+      </div>
+      <div class="psf-logo-sub">Python Software Foundation</div>
+      <p style="font-size:13.5px; color:var(--muted); text-align:center; max-width:220px; line-height:1.6;">The nonprofit organization behind the Python programming language and the global Python community.</p>
+      <a href="https://www.python.org/psf/" target="_blank" rel="noopener" class="btn btn-outline-dark" style="font-size:13px; padding:9px 18px;">
+        Visit python.org/psf
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+    </div>
+
+    <div class="psf-copy">
+      <span class="eyebrow">Our Foundation</span>
+      <h2 id="psf-heading">The Python Software Foundation</h2>
+      <p>PyHo is produced in association with the <strong>Python Software Foundation (PSF)</strong> — the nonprofit organization whose mission is to promote, protect, and advance the Python programming language and to support and facilitate the growth of a diverse and international community of Python programmers.</p>
+      <p>The PSF supports community events like PyHo through grants, fiscal sponsorship, and by providing resources that help organizers run high-quality, welcoming conferences around the world. Our partnership with the PSF connects PyHo to a global network of Python communities — from PyCon US to Python events across Africa, Europe, Asia, and beyond.</p>
+      <p>PyHo's organizers are active members of the PSF community and are committed to upholding the PSF's values of openness, diversity, and community collaboration in everything we do.</p>
+      <a href="https://www.python.org/psf/" target="_blank" rel="noopener" class="link-arrow">Learn more about the PSF →</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- ════════════════════════════════════════════
+     § CODE OF CONDUCT
+     ════════════════════════════════════════════ -->
+<section id="coc" class="section" aria-labelledby="coc-heading">
+
+  <div class="coc-intro">
+    <div>
+      <span class="eyebrow">Code of Conduct</span>
+      <h2 id="coc-heading">Our Commitment to a Respectful Community</h2>
+      <p>PyHo is dedicated to providing a harassment-free conference experience for everyone — regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices.</p>
+      <p>We do not tolerate harassment of conference participants in any form. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.</p>
+    </div>
+    <div>
+      <div class="note-box note-box-yellow" style="margin-bottom: var(--sp-4);">
+        <strong style="color: var(--forest);">This Code of Conduct applies to all PyHo spaces</strong> — talks, workshops, the sprint, social events, online channels, and any other spaces created or officially endorsed by the PyHo organizers.
+      </div>
+      <p style="font-size:14px; color:var(--muted); line-height:1.7;">Our Code of Conduct is based on the <a href="https://www.python.org/psf/conduct/" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">PSF Code of Conduct</a> and adapted for the PyHo context. We are grateful to the broader Python community for developing these shared standards.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-bottom: var(--sp-4); font-size:20px;">Expected Behaviour</h3>
+  <div class="coc-principles">
+
+    <div class="coc-principle">
+      <h4>Be Welcoming</h4>
+      <p>Use inclusive language. Welcome people from all backgrounds and experience levels. Go out of your way to make newcomers feel comfortable.</p>
+    </div>
+
+    <div class="coc-principle">
+      <h4>Be Respectful</h4>
+      <p>Different people have different perspectives and experience. Disagreement is fine — but be respectful. Criticism should be directed at ideas, not people.</p>
+    </div>
+
+    <div class="coc-principle">
+      <h4>Be Considerate</h4>
+      <p>Your work will be used by other people and you in turn will depend on the work of others. What you do affects your community, so take those consequences into account.</p>
+    </div>
+
+    <div class="coc-principle">
+      <h4>Be Kind</h4>
+      <p>It's okay to make mistakes. Be kind to others when they make mistakes, and be kind to yourself. We're all learning, and learning is the whole point of being here.</p>
+    </div>
+
+  </div>
+
+  <div class="coc-report-block" role="complementary" aria-label="Report a violation">
+    <div style="flex: 1;">
+      <h3>Experienced or witnessed something wrong?</h3>
+      <p>If you experience or witness unacceptable behaviour, or have any other concerns, please notify a conference organizer as soon as possible. Organizers are identifiable by their PyHo staff lanyards and will be stationed at the registration desk throughout the event.</p>
+      <p style="margin-top: var(--sp-2); font-size:13.5px;">You can also reach us at <a href="mailto:ho@pythonghana.org" style="color:var(--yellow); font-weight:600;">ho@pythonghana.org</a> — all reports are treated in confidence.</p>
+    </div>
+    <a href="mailto:ho@pythonghana.org" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Report a Concern
+    </a>
+  </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- ════════════════════════════════════════════
+     § DIVERSITY & INCLUSION
+     ════════════════════════════════════════════ -->
+<section id="diversity" class="section bg-sage" style="max-width:100%; padding: var(--sp-9) var(--sp-5);">
+  <div style="max-width: var(--max-w); margin: 0 auto;">
+  <div class="di-grid">
+
+    <div>
+      <span class="eyebrow">Diversity &amp; Inclusion</span>
+      <h2 id="diversity-heading">Everyone Belongs Here</h2>
+      <p class="section-lead">We believe that a diverse Python community makes Python stronger. PyHo is committed to creating an environment where people from all backgrounds can fully participate, contribute, and thrive.</p>
+      <p style="font-size:15px; color:var(--muted); line-height:1.72; margin-bottom: var(--sp-5);">We know that diversity doesn't happen by accident. It takes deliberate effort, active outreach, and structural support. These are the concrete steps we take to build a more inclusive conference every year.</p>
+      <a href="mailto:ho@pythonghana.org" class="link-arrow">Questions about D&amp;I? Reach out →</a>
+    </div>
+
+    <div class="di-initiatives">
+
+      <div class="di-item">
+        <div class="di-item-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <h4>Django Girls Ho Partnership</h4>
+          <p>We co-host the Django Girls Ho workshop — a free programming event specifically for women and non-binary people — as part of PyHo weekend. This is one of our most important community commitments.</p>
+        </div>
+      </div>
+
+      <div class="di-item">
+        <div class="di-item-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <h4>Financial Aid &amp; Travel Grants</h4>
+          <p>We set aside a portion of every sponsorship to fund financial assistance grants for attendees who would otherwise be unable to attend. Applications are reviewed by a blind panel.</p>
+        </div>
+      </div>
+
+      <div class="di-item">
+        <div class="di-item-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div>
+          <h4>Diverse Speaker Outreach</h4>
+          <p>Our programme committee actively reaches out to first-time speakers, speakers from underrepresented groups, and speakers from outside the major cities. We run a speaker mentorship programme for first-timers.</p>
+        </div>
+      </div>
+
+      <div class="di-item">
+        <div class="di-item-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h4>Safe Spaces &amp; Conduct Enforcement</h4>
+          <p>Our Code of Conduct applies everywhere at PyHo. We train our volunteers in incident response and provide multiple channels for reporting concerns — including anonymously.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- ════════════════════════════════════════════
+     § HEALTH & SAFETY
+     ════════════════════════════════════════════ -->
+<section id="health-safety" class="section" aria-labelledby="hs-heading">
+
+  <span class="eyebrow">Health &amp; Safety</span>
+  <h2 id="hs-heading">Your Safety Is Our Priority</h2>
+  <p class="section-lead">PyHo is committed to ensuring every attendee can participate safely and comfortably. Our health and safety policies are reviewed and updated before each event.</p>
+
+  <div class="hs-cards">
+
+    <div class="hs-card">
+      <div class="hs-icon hs-icon-green">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <h3>First Aid</h3>
+      <p>A certified first-aider will be on-site throughout the conference. The nearest hospital — Ho Teaching Hospital — is approximately 5 minutes by vehicle from the conference venue.</p>
+    </div>
+
+    <div class="hs-card">
+      <div class="hs-icon hs-icon-yellow">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <h3>Venue Safety</h3>
+      <p>The conference venue has clearly marked emergency exits, accessible facilities, and designated quiet areas. A venue safety briefing will be given at the start of each day.</p>
+    </div>
+
+    <div class="hs-card">
+      <div class="hs-icon hs-icon-blue">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Personal Safety</h3>
+      <p>All attendees are encouraged to wear their conference badges at all times inside the venue. Our volunteers are briefed on safety procedures and are available to assist.</p>
+    </div>
+
+  </div>
+
+  <div class="hs-contact-block" role="complementary" aria-label="Emergency contacts">
+    <h4>Emergency Contacts</h4>
+
+    <div class="hs-contact-row">
+      <span class="hs-contact-label">PyHo Safety Lead</span>
+      <span class="hs-contact-value">Available at the registration desk throughout the event</span>
+    </div>
+    <div class="hs-contact-row">
+      <span class="hs-contact-label">Safety Email</span>
+      <span class="hs-contact-value"><a href="mailto:ho@pythonghana.org" style="color:var(--forest); font-weight:600;">ho@pythonghana.org</a></span>
+    </div>
+    <!-- <div class="hs-contact-row">
+      <span class="hs-contact-label">Ho Police Service</span>
+      <span class="hs-contact-value">+233 36 209 2222 &nbsp;·&nbsp; Emergency: 999 or 18555</span>
+    </div>
+    <div class="hs-contact-row">
+      <span class="hs-contact-label">Ho Teaching Hospital</span>
+      <span class="hs-contact-value">+233 36 209 2320 &nbsp;·&nbsp; Emergency: 999</span>
+    </div>
+    <div class="hs-contact-row">
+      <span class="hs-contact-label">NADMO (Disaster Mgmt)</span>
+      <span class="hs-contact-value">+233 36 209 2020</span>
+    </div> -->
+  </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- ════════════════════════════════════════════
+     § ORGANIZERS
+     ════════════════════════════════════════════ -->
+<section id="organizers" class="section" style="background: var(--sand); max-width:100%; padding: var(--sp-9) var(--sp-5);">
+  <div style="max-width: var(--max-w); margin: 0 auto;">
+
+  <span class="eyebrow">The Team</span>
+  <h2 id="organizers-heading">Meet the Organizers</h2>
+  <p class="section-lead">PyHo is run entirely by a dedicated team of volunteers from the Python User Group Ho. Here's the core team making PyHo 2026 happen.</p>
+
+  <!-- <div class="organizers-grid">
+
+    <div class="organizer-card">
+      <div class="organizer-avatar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+      </div>
+      <div>
+        <div class="organizer-name">Conference Chair</div>
+        <div class="organizer-role">Lead Organizer</div>
+      </div>
+      <div class="organizer-socials">
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="organizer-card">
+      <div class="organizer-avatar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+      </div>
+      <div>
+        <div class="organizer-name">Programme Lead</div>
+        <div class="organizer-role">Talks &amp; Schedule</div>
+      </div>
+      <div class="organizer-socials">
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="organizer-card">
+      <div class="organizer-avatar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+      </div>
+      <div>
+        <div class="organizer-name">Sponsorship Lead</div>
+        <div class="organizer-role">Partners &amp; Finance</div>
+      </div>
+      <div class="organizer-socials">
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="organizer-card">
+      <div class="organizer-avatar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+      </div>
+      <div>
+        <div class="organizer-name">Logistics Lead</div>
+        <div class="organizer-role">Venue &amp; Operations</div>
+      </div>
+      <div class="organizer-socials">
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="organizer-card">
+      <div class="organizer-avatar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+      </div>
+      <div>
+        <div class="organizer-name">D&amp;I Lead</div>
+        <div class="organizer-role">Diversity &amp; Outreach</div>
+      </div>
+      <div class="organizer-socials">
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="organizer-card">
+      <div class="organizer-avatar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+      </div>
+      <div>
+        <div class="organizer-name">Communications</div>
+        <div class="organizer-role">Social &amp; Outreach</div>
+      </div>
+      <div class="organizer-socials">
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="organizer-card">
+      <div class="organizer-avatar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+      </div>
+      <div>
+        <div class="organizer-name">Volunteer Lead</div>
+        <div class="organizer-role">Volunteers &amp; On-site</div>
+      </div>
+      <div class="organizer-socials">
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="organizer-card" style="border-style: dashed; background: var(--cream); justify-content: center; min-height: 180px;">
+      <div class="organizer-avatar" style="background: transparent; border-color: var(--border);">
+        <svg viewBox="0 0 24 24" aria-hidden="true" style="stroke:var(--muted);"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </div>
+      <div class="organizer-name" style="color:var(--muted); font-weight:500;">Join the Team</div>
+      <div class="organizer-role" style="margin-bottom: var(--sp-2);">Volunteer Organizer</div>
+      <a href="volunteer.html" class="btn btn-outline-dark" style="font-size:12.5px; padding:7px 14px;">Learn More</a>
+    </div>
+
+  </div> -->
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- ════════════════════════════════════════════
+     § FAQ
+     ════════════════════════════════════════════ -->
+<section id="faq" class="section" aria-labelledby="faq-heading">
+
+  <span class="eyebrow">Frequently Asked Questions</span>
+  <h2 id="faq-heading">Got Questions?</h2>
+  <p class="section-lead">Here are answers to the things people ask us most. Don't see yours? Email us at <a href="mailto:ho@pythonghana.org" class="link-arrow">ho@pythonghana.org</a></p>
+
+  <div class="faq-grid" role="list">
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        What is PyHo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>PyHo is the annual Python conference for Ho, the Volta Region, and the wider Ghana developer community. It's organized by volunteers from the Python User Group Ho and covers everything from beginner-friendly workshops to advanced technical talks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        When and where is PyHo 2026?
+        <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>PyHo 2026 runs across the weekend of October 22–24, 2026, in Ho, Volta Region, Ghana. The main conference is on October 24, with the Django Girls Ho workshop on October 22–23 and the Builders Lab Sprint on October 23.</p>
+          <p>The exact venue is to be announced. Follow us on social media or sign up for our mailing list to be the first to know.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        Who is PyHo for?
+        <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Anyone who is interested in Python! Whether you're a complete beginner who has never written a line of code, a student learning programming, a working developer, a data scientist, a researcher, or an open-source contributor — there's something at PyHo for you.</p>
+          <p>We especially welcome first-time conference attendees and people from underrepresented groups in tech.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        How much do tickets cost?
+        <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>We price PyHo to be as accessible as possible. We offer student and concession rates, and early-bird tickets are available at a significant discount. Financial aid grants are also available for those who need them.</p>
+          <p>Full ticket pricing will be announced when registration opens. <a href="attend.html">Visit the Attend page</a> for the latest information.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        Can I submit a talk?
+        <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Yes! The Call for Proposals (CFP) is open now. We welcome talk submissions on any Python-related topic — web development, data science, machine learning, DevOps, education, open-source, and more.</p>
+          <p>We especially encourage first-time speakers to submit. We run a speaker mentorship programme to help you prepare. <a href="speaking.html#submit">Submit your proposal here.</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        What is the Builders Lab Sprint?
+        <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>The Builders Lab Sprint is a brand-new addition to PyHo 2026. It's a focused, hands-on coding day (October 23) where developers work in small groups to build, contribute, or prototype real projects using Python.</p>
+          <p>Whether you want to contribute to an open-source library, hack on a community tool, or start something new — the Sprint provides the space, structure, and support to make it happen. <a href="builders-lab.html">Learn more about the Builders Lab Sprint.</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        Can I volunteer at PyHo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Absolutely — and we'd love your help! Volunteers are the backbone of PyHo. As a volunteer, you'll help with registration, session management, catering, and more. In return, you get a free conference ticket and a PyHo volunteer t-shirt.</p>
+          <p><a href="volunteer.html">Visit the Volunteer page</a> to find out more and apply.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        How can my company sponsor PyHo?
+        <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Sponsoring PyHo is a great way to connect with Python developers across Ghana and the broader West Africa tech community. We offer Platinum, Gold, Silver, and Community sponsorship tiers with a range of benefits.</p>
+          <p>Download our <a href="sponsors.html#prospectus">Sponsorship Prospectus</a> or email us at <a href="mailto:sponsorship@pythonho.com">sponsorship@pythonho.com</a> to start a conversation.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- /FAQ -->
+
+
+<!-- ════════════════════════════════════════════
+     ORGANIZER STRIP
+     ════════════════════════════════════════════ -->
+<div class="organizer-strip">
+  <p>The PyHo 2026 Builders Conference is organized by the <strong>Python User Group Ho</strong></p>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <img src="../images/pyho2026-logo.png" alt="PyHo 2026">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Python User Group Ho. PyHo 2026 is a community event.</p>
+
+      <div class="footer-socials" aria-label="Social media links">
+
+        <!-- X / Twitter -->
+        <a href="https://x.com/PythonHo" target="_blank" rel="noopener" aria-label="PyHo on X (Twitter)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/pythonho" target="_blank" rel="noopener" aria-label="PyHo on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/hopythonusergroup" target="_blank" rel="noopener" aria-label="PyHo on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@PythonHo" target="_blank" rel="noopener" aria-label="PyHo on YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+<!-- /FOOTER -->
+
+
+<!-- ① Shared JS -->
+<script src="../js/site.js"></script>
+
+<!-- ② Page-specific JS: FAQ accordion + subnav highlight -->
+<script>
+  /* ── FAQ ACCORDION ── */
+  function toggleFaq(btn) {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    const answer = btn.nextElementSibling;
+
+    /* Close all */
+    document.querySelectorAll('.faq-question').forEach(function(q) {
+      q.setAttribute('aria-expanded', 'false');
+      q.nextElementSibling.classList.remove('open');
+    });
+
+    /* Open this one if it was closed */
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      answer.classList.add('open');
+    }
+  }
+
+  /* ── SUBNAV ACTIVE HIGHLIGHT on scroll ── */
+  (function () {
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.about-subnav-inner a');
+    const navH     = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 68;
+    const subNavH  = 45;
+    const offset   = navH + subNavH + 16;
+
+    function setActive() {
+      let current = '';
+      sections.forEach(function(sec) {
+        if (window.scrollY >= sec.offsetTop - offset) {
+          current = sec.getAttribute('id');
+        }
+      });
+      navLinks.forEach(function(a) {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) {
+          a.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+  })();
+</script>
+
+</body>
+</html>
