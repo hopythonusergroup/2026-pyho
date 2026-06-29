@@ -871,15 +871,23 @@ p {
   margin: 0 auto;
 }
 
-.footer-top {
+/* .footer-top {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 40px;
   margin-bottom: var(--sp-7);
+} */
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-6);
 }
 
 .footer-brand img {
-  height: 44px;
+  /* height: 44px; */
   filter: brightness(0) invert(1);
   opacity: 0.88;
   margin-bottom: var(--sp-3);
@@ -919,6 +927,7 @@ p {
   border-top: 1px solid rgba(255, 255, 255, 0.10);
   padding-top: var(--sp-5);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
