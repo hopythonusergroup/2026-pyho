@@ -1,547 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Builders Lab Sprint — PyHo 2026 · Python Conference, Ho, Ghana</title>
-  <meta name="description" content="The PyHo Builders Lab is a high-intensity, hands-on build sprint at PyHo 2026. Developers collaborate, prototype, and ship real-world products across 5 domain tracks. October 23, Ho, Ghana." />
+  <meta name="description"
+    content="The PyHo Builders Lab is a high-intensity, hands-on build sprint at PyHo 2026. Developers collaborate, prototype, and ship real-world products across 5 domain tracks. October 23, Ho, Ghana." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/builders-lab.css" />
 </head>
+
 <body>
 
-<nav class="site-nav" role="navigation" aria-label="Main navigation">
-  <a href="../index.html" class="nav-logo" aria-label="PyHo 2026 — Home">
-    <img src="../images/pyho2026-logo.png" alt="PyHo 2026">
-  </a>
-  <ul class="nav-links" id="navLinks" role="list">
-    <li class="nav-item" data-dropdown>
-      <button aria-haspopup="true" aria-expanded="false">
-        About <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-      </button>
-      <div class="dropdown" role="menu">
-        <a href="about.html" role="menuitem">About PyHo</a>
-        <a href="psf.html" role="menuitem">Python Software Foundation</a>
-        <a href="code-of-conduct.html" role="menuitem">Code of Conduct</a>
-        <a href="diversity.html" role="menuitem">Diversity &amp; Inclusion</a>
-        <a href="health-safety.html" role="menuitem">Health &amp; Safety</a>
-        <div class="dropdown-divider"></div>
-        <a href="organizers.html" role="menuitem">Organizers</a>
-        <a href="faq.html" role="menuitem">FAQ</a>
-        <a href="builders-lab.html" role="menuitem">Builders Lab Sprint</a>
-      </div>
-    </li>
-    <li class="nav-item" data-dropdown>
-      <button aria-haspopup="true" aria-expanded="false">
-        Venue <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-      </button>
-      <div class="dropdown" role="menu">
-        <a href="venue.html" role="menuitem">Welcome to Ho</a>
-        <a href="venue.html#venue" role="menuitem">Conference Venue</a>
-        <a href="venue.html#getting-here" role="menuitem">Getting Here</a>
-        <a href="venue.html#accommodation" role="menuitem">Accommodation</a>
-      </div>
-    </li>
-    <li class="nav-item" data-dropdown>
-      <button aria-haspopup="true" aria-expanded="false">
-        Sponsor <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-      </button>
-      <div class="dropdown" role="menu">
-        <a href="why-sponsor.html" role="menuitem">Why Sponsor</a>
-        <a href="our-sponsors.html" role="menuitem">Our Sponsors</a>
-        <a href="../files/pyho2026-sponsorship-prospectus.pdf" target="_blank" rel="noopener" role="menuitem">Sponsorship Prospectus</a>
-      </div>
-    </li>
-    <li class="nav-item" data-dropdown>
-      <button aria-haspopup="true" aria-expanded="false">
-        Speaking <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-      </button>
-      <div class="dropdown" role="menu">
-        <a href="speaking.html" role="menuitem">Speaking at PyHo</a>
-        <a href="speaking.html#resources" role="menuitem">Speaker Resources</a>
-        <a href="speaking.html#submit" role="menuitem">Submit a Talk</a>
-      </div>
-    </li>
-    <li class="nav-item"><a href="attend.html">Attend</a></li>
-    <!-- <li class="nav-item" data-dropdown>
-      <button aria-haspopup="true" aria-expanded="false">
-        Schedule <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-      </button>
-      <div class="dropdown" role="menu">
-        <a href="schedule.html#django-girls" role="menuitem">Django Girls Ho — Oct 22–23</a>
-        <a href="schedule.html#builders-lab" role="menuitem">Builders Lab Sprint — Oct 23</a>
-        <a href="schedule.html#talks" role="menuitem">Talks — Oct 24</a>
-      </div>
-    </li>
-    <li class="nav-item" data-dropdown>
-      <button aria-haspopup="true" aria-expanded="false">
-        Volunteer <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-      </button>
-      <div class="dropdown" role="menu">
-        <a href="volunteer.html" role="menuitem">Volunteering at PyHo</a>
-        <a href="volunteer.html#apply" role="menuitem">Apply to Volunteer</a>
-      </div>
-    </li> -->
-  </ul>
-  <a href="attend.html" class="nav-cta">Buy Ticket</a>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-    <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
-  </button>
-</nav>
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a href="../index.html" class="nav-logo" aria-label="PyHo 2026 — Home">
+      <img src="../images/pyho2026-logo.png" alt="PyHo 2026">
+    </a>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li class="nav-item" data-dropdown>
+        <button aria-haspopup="true" aria-expanded="false">
+          About <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" />
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="about.html" role="menuitem">About PyHo</a>
+          <a href="psf.html" role="menuitem">Python Software Foundation</a>
+          <a href="code-of-conduct.html" role="menuitem">Code of Conduct</a>
+          <a href="diversity.html" role="menuitem">Diversity &amp; Inclusion</a>
+          <a href="health-safety.html" role="menuitem">Health &amp; Safety</a>
+          <div class="dropdown-divider"></div>
+          <a href="organizers.html" role="menuitem">Organizers</a>
+          <a href="faq.html" role="menuitem">FAQ</a>
+          <a href="builders-lab.html" role="menuitem">Builders Lab Sprint</a>
+        </div>
+      </li>
+      <li class="nav-item" data-dropdown>
+        <button aria-haspopup="true" aria-expanded="false">
+          Venue <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" />
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="venue.html" role="menuitem">Welcome to Ho</a>
+          <a href="venue.html#venue" role="menuitem">Conference Venue</a>
+          <a href="venue.html#getting-here" role="menuitem">Getting Here</a>
+          <a href="venue.html#accommodation" role="menuitem">Accommodation</a>
+        </div>
+      </li>
+      <li class="nav-item" data-dropdown>
+        <button aria-haspopup="true" aria-expanded="false">
+          Sponsor <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" />
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="why-sponsor.html" role="menuitem">Why Sponsor</a>
+          <a href="our-sponsors.html" role="menuitem">Our Sponsors</a>
+          <a href="../files/pyho2026-sponsorship-prospectus.pdf" target="_blank" rel="noopener"
+            role="menuitem">Sponsorship Prospectus</a>
+        </div>
+      </li>
+      <li class="nav-item" data-dropdown>
+        <button aria-haspopup="true" aria-expanded="false">
+          Speaking <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" />
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="speaking.html" role="menuitem">Speaking at PyHo</a>
+          <a href="speaking.html#resources" role="menuitem">Speaker Resources</a>
+          <a href="speaking.html#submit" role="menuitem">Submit a Talk</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="attend.html">Attend</a></li>
+      <li class="nav-item" data-dropdown>
+        <button aria-haspopup="true" aria-expanded="false">
+          Schedule <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" />
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="schedule.html#django-girls" role="menuitem">Django Girls Ho — Oct 22–23</a>
+          <a href="schedule.html#builders-lab" role="menuitem">Builders Lab Sprint — Oct 23</a>
+          <a href="schedule.html#talks" role="menuitem">Talks — Oct 24</a>
+        </div>
+      </li>
+      <li class="nav-item" data-dropdown>
+        <button aria-haspopup="true" aria-expanded="false">
+          Volunteer <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" />
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="volunteer.html" role="menuitem">Volunteering at PyHo</a>
+          <a href="volunteer.html#apply" role="menuitem">Apply to Volunteer</a>
+        </div>
+      </li>
+    </ul>
+    <a href="attend.html" class="nav-cta">Buy Ticket</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false"
+      aria-controls="navLinks">
+      <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true" style="display:none;">
+        <line x1="5" y1="5" x2="19" y2="19" />
+        <line x1="19" y1="5" x2="5" y2="19" />
+      </svg>
+    </button>
+  </nav>
 
 
-<!-- PAGE HERO -->
-<header class="page-hero">
-  <div class="page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../index.html">Home</a>
-      <span>›</span>
-      <a href="about.html">About</a>
-      <span>›</span>
-      <span>Builders Lab Sprint</span>
-    </nav>
-    <span class="eyebrow" style="color: rgba(255,212,59,0.75);">New for PyHo 2026 · October 23, Ho</span>
-    <h1>PyHo Builders Lab Sprint</h1>
-    <p class="page-hero-lead">A high-intensity, hands-on build sprint where developers collaborate, prototype, and ship real-world products — in a single focused day.</p>
-  </div>
-</header>
-
-
-<!-- STATEMENT BAND — signature element -->
-<div class="statement-band" aria-label="What the Builders Lab is">
-  <div class="statement-band__inner">
-    <div class="statement-band__not">
-      <p class="statement-band__label-not">This is not</p>
-      <p class="statement-band__line-not">A workshop.</p>
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="about.html">About</a>
+        <span>›</span>
+        <span>Builders Lab Sprint</span>
+      </nav>
+      <span class="eyebrow" style="color: rgba(255,212,59,0.75);">New for PyHo 2026 · October 23, Ho</span>
+      <h1>PyHo Builders Lab Sprint</h1>
+      <p class="page-hero-lead">A high-intensity, hands-on build sprint where developers collaborate, prototype, and
+        ship real-world products — in a single focused day.</p>
     </div>
-    <div class="statement-band__is">
-      <p class="statement-band__label-is">This is</p>
-      <p class="statement-band__line-is">A <em>Build + Ship</em> experience.</p>
-    </div>
-    <div class="statement-band__sub">
-      <p class="statement-band__theme">Aligned with PyHo 2026: <strong>"Python for Builders: AI, Automation &amp; Real-World Products."</strong></p>
-      <div class="statement-band__meta">
-        <span class="statement-band__pill">October 23, 2026</span>
-        <span class="statement-band__pill">Ho, Volta Region</span>
-        <span class="statement-band__pill">5 Domain Tracks</span>
-        <span class="statement-band__pill">Structured Teams</span>
-      </div>
-    </div>
-  </div>
-</div>
+  </header>
 
 
-<!-- PURPOSE -->
-<section class="bl-section">
-  <div class="bl-section__inner">
-    <span class="eyebrow">Purpose</span>
-    <h2 class="bl-section__heading">What the Builders Lab is designed to do</h2>
-    <p class="bl-section__sub">This is a product lab inside a conference. Five goals, one sprint day.</p>
-    <div class="purpose-list" role="list">
-      <div class="purpose-item" role="listitem">
-        <span class="purpose-item__icon">🚀</span>
-        <p class="purpose-item__text">Move developers from learning → building → shipping</p>
+  <!-- STATEMENT BAND — signature element -->
+  <div class="statement-band" aria-label="What the Builders Lab is">
+    <div class="statement-band__inner">
+      <div class="statement-band__not">
+        <p class="statement-band__label-not">This is not</p>
+        <p class="statement-band__line-not">A workshop.</p>
       </div>
-      <div class="purpose-item" role="listitem">
-        <span class="purpose-item__icon">🔧</span>
-        <p class="purpose-item__text">Provide hands-on access to modern tools, APIs, and platforms</p>
+      <div class="statement-band__is">
+        <p class="statement-band__label-is">This is</p>
+        <p class="statement-band__line-is">A <em>Build + Ship</em> experience.</p>
       </div>
-      <div class="purpose-item" role="listitem">
-        <span class="purpose-item__icon">🌍</span>
-        <p class="purpose-item__text">Enable real-world problem solving across key sectors</p>
-      </div>
-      <div class="purpose-item" role="listitem">
-        <span class="purpose-item__icon">🤝</span>
-        <p class="purpose-item__text">Connect developers with companies, products, and opportunities</p>
-      </div>
-      <div class="purpose-item" role="listitem">
-        <span class="purpose-item__icon">🌐</span>
-        <p class="purpose-item__text">Strengthen Ghana's position in the global builder ecosystem</p>
+      <div class="statement-band__sub">
+        <p class="statement-band__theme">Aligned with PyHo 2026: <strong>"Python for Builders: AI, Automation &amp;
+            Real-World Products."</strong></p>
+        <div class="statement-band__meta">
+          <span class="statement-band__pill">October 23, 2026</span>
+          <span class="statement-band__pill">Ho, Volta Region</span>
+          <span class="statement-band__pill">5 Domain Tracks</span>
+          <span class="statement-band__pill">Structured Teams</span>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
 
-<!-- WHAT MAKES IT DIFFERENT -->
-<section class="bl-section bl-section--sage">
-  <div class="bl-section__inner">
-    <span class="eyebrow">What Makes It Different</span>
-    <h2 class="bl-section__heading">Not a hackathon. Not a workshop.</h2>
-    <p class="bl-section__sub">Unlike traditional formats, the Builders Lab is built around four principles that prioritise output quality over participation volume.</p>
-    <div class="diff-grid">
-      <div class="diff-card">
-        <span class="diff-card__badge diff-card__badge--structured">Structured</span>
-        <h3 class="diff-card__title">Organised into focused, domain-specific tracks</h3>
-        <p class="diff-card__body">Instead of an open free-for-all, the Builders Lab channels energy into five curated domains. Each track has a defined problem space, dedicated mentors, and partner tooling — so builders spend time shipping, not scoping.</p>
-      </div>
-      <div class="diff-card">
-        <span class="diff-card__badge diff-card__badge--partner">Partner-Driven</span>
-        <h3 class="diff-card__title">Companies bring real tools, data, and challenges</h3>
-        <p class="diff-card__body">Track partners aren't logos on a banner. They bring APIs, datasets, problem statements, and engineers who stay on the floor to mentor. The challenges are real. The tools are production-grade. The feedback is immediate.</p>
-      </div>
-      <div class="diff-card">
-        <span class="diff-card__badge diff-card__badge--execution">Execution-Focused</span>
-        <h3 class="diff-card__title">Emphasis on working products, not just ideas</h3>
-        <p class="diff-card__body">The Builders Lab measures success in functional demos, not pitch decks. Teams are expected to write code, hit an endpoint, and show something running by the showcase. Ideas without implementations don't count.</p>
-      </div>
-      <div class="diff-card">
-        <span class="diff-card__badge diff-card__badge--curated">Curated</span>
-        <h3 class="diff-card__title">Selected participants ensure quality collaboration</h3>
-        <p class="diff-card__body">Participants apply and are selected for each track. This keeps team sizes manageable, skill levels relevant to the problem, and the overall collaboration quality high. Quality over headcount.</p>
+  <!-- PURPOSE -->
+  <section class="bl-section">
+    <div class="bl-section__inner">
+      <span class="eyebrow">Purpose</span>
+      <h2 class="bl-section__heading">What the Builders Lab is designed to do</h2>
+      <p class="bl-section__sub">This is a product lab inside a conference. Five goals, one sprint day.</p>
+      <div class="purpose-list" role="list">
+        <div class="purpose-item" role="listitem">
+          <span class="purpose-item__icon">🚀</span>
+          <p class="purpose-item__text">Move developers from learning → building → shipping</p>
+        </div>
+        <div class="purpose-item" role="listitem">
+          <span class="purpose-item__icon">🔧</span>
+          <p class="purpose-item__text">Provide hands-on access to modern tools, APIs, and platforms</p>
+        </div>
+        <div class="purpose-item" role="listitem">
+          <span class="purpose-item__icon">🌍</span>
+          <p class="purpose-item__text">Enable real-world problem solving across key sectors</p>
+        </div>
+        <div class="purpose-item" role="listitem">
+          <span class="purpose-item__icon">🤝</span>
+          <p class="purpose-item__text">Connect developers with companies, products, and opportunities</p>
+        </div>
+        <div class="purpose-item" role="listitem">
+          <span class="purpose-item__icon">🌐</span>
+          <p class="purpose-item__text">Strengthen Ghana's position in the global builder ecosystem</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- CORE TRACKS -->
-<section class="bl-section bl-section--forest">
-  <div class="bl-section__inner">
-    <div class="tracks-header">
+  <!-- WHAT MAKES IT DIFFERENT -->
+  <section class="bl-section bl-section--sage">
+    <div class="bl-section__inner">
+      <span class="eyebrow">What Makes It Different</span>
+      <h2 class="bl-section__heading">Not a hackathon. Not a workshop.</h2>
+      <p class="bl-section__sub">Unlike traditional formats, the Builders Lab is built around four principles that
+        prioritise output quality over participation volume.</p>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <span class="diff-card__badge diff-card__badge--structured">Structured</span>
+          <h3 class="diff-card__title">Organised into focused, domain-specific tracks</h3>
+          <p class="diff-card__body">Instead of an open free-for-all, the Builders Lab channels energy into five curated
+            domains. Each track has a defined problem space, dedicated mentors, and partner tooling — so builders spend
+            time shipping, not scoping.</p>
+        </div>
+        <div class="diff-card">
+          <span class="diff-card__badge diff-card__badge--partner">Partner-Driven</span>
+          <h3 class="diff-card__title">Companies bring real tools, data, and challenges</h3>
+          <p class="diff-card__body">Track partners aren't logos on a banner. They bring APIs, datasets, problem
+            statements, and engineers who stay on the floor to mentor. The challenges are real. The tools are
+            production-grade. The feedback is immediate.</p>
+        </div>
+        <div class="diff-card">
+          <span class="diff-card__badge diff-card__badge--execution">Execution-Focused</span>
+          <h3 class="diff-card__title">Emphasis on working products, not just ideas</h3>
+          <p class="diff-card__body">The Builders Lab measures success in functional demos, not pitch decks. Teams are
+            expected to write code, hit an endpoint, and show something running by the showcase. Ideas without
+            implementations don't count.</p>
+        </div>
+        <div class="diff-card">
+          <span class="diff-card__badge diff-card__badge--curated">Curated</span>
+          <h3 class="diff-card__title">Selected participants ensure quality collaboration</h3>
+          <p class="diff-card__body">Participants apply and are selected for each track. This keeps team sizes
+            manageable, skill levels relevant to the problem, and the overall collaboration quality high. Quality over
+            headcount.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CORE TRACKS -->
+  <section class="bl-section bl-section--forest">
+    <div class="bl-section__inner">
+      <div class="tracks-header">
+        <div>
+          <span class="eyebrow" style="color: rgba(255,212,59,0.7);">Core Tracks</span>
+          <h2 class="bl-section__heading bl-section__heading--light">Five domains. One sprint day.</h2>
+          <p>Each track is powered by ecosystem partners providing APIs, datasets, problem statements, and mentorship.
+            Choose your domain when you apply.</p>
+        </div>
+        <div class="tracks-capacity">
+          <span class="tracks-capacity__num">30–40</span>
+          <span class="tracks-capacity__label">developers per track</span>
+        </div>
+      </div>
+      <div class="tracks-grid">
+        <div class="track-panel">
+          <div class="track-panel__accent" style="--tp-color: #16A34A;"></div>
+          <span class="track-panel__icon">💳</span>
+          <h3 class="track-panel__name">FinTech</h3>
+          <p class="track-panel__domain">Payments, financial tools, and APIs</p>
+          <div class="track-panel__tags">
+            <span class="track-panel__tag" style="--tp-color: #16A34A;">Mobile money integrations</span>
+            <span class="track-panel__tag" style="--tp-color: #16A34A;">Payment APIs &amp; gateways</span>
+            <span class="track-panel__tag" style="--tp-color: #16A34A;">Financial data tools</span>
+            <span class="track-panel__tag" style="--tp-color: #16A34A;">Credit &amp; lending platforms</span>
+          </div>
+        </div>
+        <div class="track-panel">
+          <div class="track-panel__accent" style="--tp-color: #0F766E;"></div>
+          <span class="track-panel__icon">🤖</span>
+          <h3 class="track-panel__name">AI / Data</h3>
+          <p class="track-panel__domain">Intelligent systems, automation, and agents</p>
+          <div class="track-panel__tags">
+            <span class="track-panel__tag" style="--tp-color: #0F766E;">LLM-powered applications</span>
+            <span class="track-panel__tag" style="--tp-color: #0F766E;">AI agents &amp; workflows</span>
+            <span class="track-panel__tag" style="--tp-color: #0F766E;">ML model deployment</span>
+            <span class="track-panel__tag" style="--tp-color: #0F766E;">Data pipelines &amp; analytics</span>
+          </div>
+        </div>
+        <div class="track-panel">
+          <div class="track-panel__accent" style="--tp-color: #7C3AED;"></div>
+          <span class="track-panel__icon">⛓️</span>
+          <h3 class="track-panel__name">Web3</h3>
+          <p class="track-panel__domain">Decentralized applications and digital ownership</p>
+          <div class="track-panel__tags">
+            <span class="track-panel__tag" style="--tp-color: #7C3AED;">Smart contract tooling</span>
+            <span class="track-panel__tag" style="--tp-color: #7C3AED;">DeFi &amp; token systems</span>
+            <span class="track-panel__tag" style="--tp-color: #7C3AED;">Digital identity solutions</span>
+            <span class="track-panel__tag" style="--tp-color: #7C3AED;">On-chain data applications</span>
+          </div>
+        </div>
+        <div class="track-panel">
+          <div class="track-panel__accent" style="--tp-color: #DC2626;"></div>
+          <span class="track-panel__icon">🏥</span>
+          <h3 class="track-panel__name">HealthTech</h3>
+          <p class="track-panel__domain">Healthcare access and diagnostic solutions</p>
+          <div class="track-panel__tags">
+            <span class="track-panel__tag" style="--tp-color: #DC2626;">Patient data platforms</span>
+            <span class="track-panel__tag" style="--tp-color: #DC2626;">Diagnostic support tools</span>
+            <span class="track-panel__tag" style="--tp-color: #DC2626;">Health records &amp; APIs</span>
+            <span class="track-panel__tag" style="--tp-color: #DC2626;">Community health systems</span>
+          </div>
+        </div>
+        <div class="track-panel">
+          <div class="track-panel__accent" style="--tp-color: #B45309;"></div>
+          <span class="track-panel__icon">🌾</span>
+          <h3 class="track-panel__name">AgriTech</h3>
+          <p class="track-panel__domain">Agriculture, supply chains, and farmer tools</p>
+          <div class="track-panel__tags">
+            <span class="track-panel__tag" style="--tp-color: #B45309;">Farm management systems</span>
+            <span class="track-panel__tag" style="--tp-color: #B45309;">Supply chain traceability</span>
+            <span class="track-panel__tag" style="--tp-color: #B45309;">Market price &amp; yield data</span>
+            <span class="track-panel__tag" style="--tp-color: #B45309;">Farmer-facing mobile tools</span>
+          </div>
+        </div>
+      </div>
+      <div class="tracks-partner-note">
+        <strong>Each track is partner-powered.</strong> Partners provide APIs, datasets or infrastructure, real-world
+        problem statements, and mentorship on the floor. Track availability is subject to partner confirmation closer to
+        the event.
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SPRINT FLOW -->
+  <section class="bl-section bl-section--sand">
+    <div class="bl-section__inner">
+      <span class="eyebrow">Sprint Flow</span>
+      <h2 class="bl-section__heading">How the day runs</h2>
+      <p class="bl-section__sub">The Builders Lab follows a structured arc from kickoff to showcase. Every team moves
+        through the same five stages on the same clock.</p>
+      <div class="sprint-flow" role="list">
+        <div class="sprint-step" role="listitem">
+          <div class="sprint-step__num" aria-hidden="true">1</div>
+          <h3 class="sprint-step__title">Kickoff</h3>
+          <p class="sprint-step__body">Problem alignment, team formation, track introductions, and partner briefings.
+            Builders choose their focus and meet their teammates.</p>
+        </div>
+        <div class="sprint-step" role="listitem">
+          <div class="sprint-step__num" aria-hidden="true">2</div>
+          <h3 class="sprint-step__title">Build Phase</h3>
+          <p class="sprint-step__body">Active development with mentor support on the floor. Teams write code, hit APIs,
+            and iterate fast. Partners available for technical guidance.</p>
+        </div>
+        <div class="sprint-step" role="listitem">
+          <div class="sprint-step__num" aria-hidden="true">3</div>
+          <h3 class="sprint-step__title">Check-ins</h3>
+          <p class="sprint-step__body">Structured mid-sprint progress reviews. Mentors help unblock teams,
+            course-correct, and ensure every group has something to show by end of day.</p>
+        </div>
+        <div class="sprint-step" role="listitem">
+          <div class="sprint-step__num" aria-hidden="true">4</div>
+          <h3 class="sprint-step__title">Demo Prep</h3>
+          <p class="sprint-step__body">Teams finalise their prototypes and prepare short, focused demo pitches. The
+            emphasis is on showing what works — no slide decks required.</p>
+        </div>
+        <div class="sprint-step" role="listitem">
+          <div class="sprint-step__num" aria-hidden="true">5</div>
+          <h3 class="sprint-step__title">Showcase</h3>
+          <p class="sprint-step__body">Live demos to judges, track partners, and conference attendees. Selected projects
+            are highlighted publicly. Partners identify standout talent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PARTICIPANT STRUCTURE -->
+  <section class="bl-section">
+    <div class="bl-section__inner">
+      <span class="eyebrow">Participant Structure</span>
+      <h2 class="bl-section__heading">Who builds, and how</h2>
+      <p class="bl-section__sub">The Builders Lab is selective by design. A smaller, focused group produces better work
+        than a crowded hall full of strangers.</p>
+      <div class="participant-layout">
+        <div class="participant-stats">
+          <div class="pstat">
+            <span class="pstat__num">30–40</span>
+            <span class="pstat__label">selected developers per track</span>
+          </div>
+          <div class="pstat">
+            <span class="pstat__num">5</span>
+            <span class="pstat__label">domain tracks to choose from</span>
+          </div>
+          <div class="pstat pstat--wide">
+            <span class="pstat__num">1 day</span>
+            <span class="pstat__label">focused sprint · October 23, 2026</span>
+          </div>
+        </div>
+        <div class="participant-detail">
+          <p>Participants apply and select their preferred track. Teams are formed around shared interests or
+            complementary skills within the problem area — not randomly assigned.</p>
+          <p>This structure ensures:</p>
+          <ul class="participant-benefits">
+            <li>Meaningful collaboration between builders who share a domain interest</li>
+            <li>Focused building rather than scope creep or context switching</li>
+            <li>Strong output quality — prototypes that are actually worth showcasing</li>
+            <li>Direct access to partner mentors with relevant expertise</li>
+          </ul>
+          <div class="note-box note-box-yellow" style="margin-top: 0.5rem;">
+            <strong>What you'll build.</strong> Backend APIs and services, AI-powered applications and agents,
+            automation tools and workflows, developer tools and platforms, or cloud-deployed systems — depending on your
+            track.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PARTNER ROLE -->
+  <section class="bl-section bl-section--forest">
+    <div class="bl-section__inner">
+      <span class="eyebrow" style="color: rgba(255,212,59,0.7);">Partners</span>
+      <h2 class="bl-section__heading bl-section__heading--light">The Builders Lab is partner-powered</h2>
+      <p class="bl-section__sub bl-section__sub--light">Partners don't just sponsor a banner. They shape the track,
+        bring the tools, and work alongside builders on the floor.</p>
+      <div class="partner-grid">
+        <div class="partner-card partner-card--bring">
+          <h3 class="partner-card__title">What partners bring</h3>
+          <ul class="partner-list">
+            <li>A sponsored track or challenge with a defined problem statement</li>
+            <li>APIs, SDKs, datasets, or cloud infrastructure for builders to use</li>
+            <li>Engineers and technical mentors available throughout the sprint</li>
+            <li>Prizes or recognition for standout solutions in their track</li>
+            <li>Feedback and evaluation at the showcase demo session</li>
+          </ul>
+        </div>
+        <div class="partner-card partner-card--get">
+          <h3 class="partner-card__title">What partners gain</h3>
+          <ul class="partner-list">
+            <li>Early access to developer talent before they enter the job market</li>
+            <li>Real-world product exposure and adoption of your tools and APIs</li>
+            <li>Use-case experimentation — what do builders actually build with your product?</li>
+            <li>Brand positioning inside a builder-focused ecosystem in Ghana</li>
+            <li>Relationships with the Python community across West Africa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="partner-cta-strip">
+        <p><strong>Interested in sponsoring a track?</strong> Partner slots for the Builders Lab are separate from
+          general conference sponsorship. Get in touch to discuss track partnership opportunities.</p>
+        <a href="mailto:ho@pythonghana.org?subject=Builders%20Lab%20Track%20Partnership%20%E2%80%94%20PyHo%202026"
+          class="btn-yellow">
+          Enquire about track partnership →
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EXPECTED OUTCOMES -->
+  <section class="bl-section bl-section--sage">
+    <div class="bl-section__inner">
+      <span class="eyebrow">Expected Outcomes</span>
+      <h2 class="bl-section__heading">What the day produces</h2>
+      <p class="bl-section__sub">By the end of the Builders Lab, every participant, partner, and organiser should leave
+        with something real.</p>
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <span class="outcome-card__icon">🏗️</span>
+          <h3 class="outcome-card__title">Working prototypes</h3>
+          <p class="outcome-card__body">Teams deliver functional demos — not wireframes or slideshows. Each team ships
+            something that runs, even if it's rough around the edges. That's the standard.</p>
+        </div>
+        <div class="outcome-card">
+          <span class="outcome-card__icon">📢</span>
+          <h3 class="outcome-card__title">Public showcase</h3>
+          <p class="outcome-card__body">Selected projects are showcased to the full PyHo 2026 audience on October 24.
+            Outstanding builds get visibility well beyond the sprint room.</p>
+        </div>
+        <div class="outcome-card">
+          <span class="outcome-card__icon">💡</span>
+          <h3 class="outcome-card__title">Partner insights</h3>
+          <p class="outcome-card__body">Track partners gain direct insight into how developers use their tools, what
+            problems they solve, and where the real-world friction points are.</p>
+        </div>
+        <div class="outcome-card">
+          <span class="outcome-card__icon">💼</span>
+          <h3 class="outcome-card__title">Portfolio-ready work</h3>
+          <p class="outcome-card__body">Every builder leaves with practical, demonstrable engineering work they built
+            themselves. Real code, real problem, real solution — exactly what a portfolio needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- COMMUNITY IMPACT BAND -->
+  <div class="impact-band">
+    <div class="impact-band__inner">
       <div>
-        <span class="eyebrow" style="color: rgba(255,212,59,0.7);">Core Tracks</span>
-        <h2 class="bl-section__heading bl-section__heading--light">Five domains. One sprint day.</h2>
-        <p>Each track is powered by ecosystem partners providing APIs, datasets, problem statements, and mentorship. Choose your domain when you apply.</p>
+        <h2 class="impact-band__heading">Bridging learning and real-world application in Ghana's builder ecosystem</h2>
+        <p class="impact-band__body">The Builders Lab is more than a sprint. It's a deliberate effort to close the gap
+          between developers who know Python and developers who build with it — and to do that inside one of Africa's
+          most active Python communities.</p>
       </div>
-      <div class="tracks-capacity">
-        <span class="tracks-capacity__num">30–40</span>
-        <span class="tracks-capacity__label">developers per track</span>
-      </div>
-    </div>
-    <div class="tracks-grid">
-      <div class="track-panel">
-        <div class="track-panel__accent" style="--tp-color: #16A34A;"></div>
-        <span class="track-panel__icon">💳</span>
-        <h3 class="track-panel__name">FinTech</h3>
-        <p class="track-panel__domain">Payments, financial tools, and APIs</p>
-        <div class="track-panel__tags">
-          <span class="track-panel__tag" style="--tp-color: #16A34A;">Mobile money integrations</span>
-          <span class="track-panel__tag" style="--tp-color: #16A34A;">Payment APIs &amp; gateways</span>
-          <span class="track-panel__tag" style="--tp-color: #16A34A;">Financial data tools</span>
-          <span class="track-panel__tag" style="--tp-color: #16A34A;">Credit &amp; lending platforms</span>
+      <div class="impact-pillars">
+        <div class="impact-pillar">
+          <span class="impact-pillar__icon">🔨</span>
+          <p class="impact-pillar__text">Build with modern tools and platforms</p>
         </div>
-      </div>
-      <div class="track-panel">
-        <div class="track-panel__accent" style="--tp-color: #0F766E;"></div>
-        <span class="track-panel__icon">🤖</span>
-        <h3 class="track-panel__name">AI / Data</h3>
-        <p class="track-panel__domain">Intelligent systems, automation, and agents</p>
-        <div class="track-panel__tags">
-          <span class="track-panel__tag" style="--tp-color: #0F766E;">LLM-powered applications</span>
-          <span class="track-panel__tag" style="--tp-color: #0F766E;">AI agents &amp; workflows</span>
-          <span class="track-panel__tag" style="--tp-color: #0F766E;">ML model deployment</span>
-          <span class="track-panel__tag" style="--tp-color: #0F766E;">Data pipelines &amp; analytics</span>
+        <div class="impact-pillar">
+          <span class="impact-pillar__icon">⚙️</span>
+          <p class="impact-pillar__text">Gain hands-on engineering experience</p>
         </div>
-      </div>
-      <div class="track-panel">
-        <div class="track-panel__accent" style="--tp-color: #7C3AED;"></div>
-        <span class="track-panel__icon">⛓️</span>
-        <h3 class="track-panel__name">Web3</h3>
-        <p class="track-panel__domain">Decentralized applications and digital ownership</p>
-        <div class="track-panel__tags">
-          <span class="track-panel__tag" style="--tp-color: #7C3AED;">Smart contract tooling</span>
-          <span class="track-panel__tag" style="--tp-color: #7C3AED;">DeFi &amp; token systems</span>
-          <span class="track-panel__tag" style="--tp-color: #7C3AED;">Digital identity solutions</span>
-          <span class="track-panel__tag" style="--tp-color: #7C3AED;">On-chain data applications</span>
+        <div class="impact-pillar">
+          <span class="impact-pillar__icon">🤝</span>
+          <p class="impact-pillar__text">Collaborate across domains</p>
         </div>
-      </div>
-      <div class="track-panel">
-        <div class="track-panel__accent" style="--tp-color: #DC2626;"></div>
-        <span class="track-panel__icon">🏥</span>
-        <h3 class="track-panel__name">HealthTech</h3>
-        <p class="track-panel__domain">Healthcare access and diagnostic solutions</p>
-        <div class="track-panel__tags">
-          <span class="track-panel__tag" style="--tp-color: #DC2626;">Patient data platforms</span>
-          <span class="track-panel__tag" style="--tp-color: #DC2626;">Diagnostic support tools</span>
-          <span class="track-panel__tag" style="--tp-color: #DC2626;">Health records &amp; APIs</span>
-          <span class="track-panel__tag" style="--tp-color: #DC2626;">Community health systems</span>
-        </div>
-      </div>
-      <div class="track-panel">
-        <div class="track-panel__accent" style="--tp-color: #B45309;"></div>
-        <span class="track-panel__icon">🌾</span>
-        <h3 class="track-panel__name">AgriTech</h3>
-        <p class="track-panel__domain">Agriculture, supply chains, and farmer tools</p>
-        <div class="track-panel__tags">
-          <span class="track-panel__tag" style="--tp-color: #B45309;">Farm management systems</span>
-          <span class="track-panel__tag" style="--tp-color: #B45309;">Supply chain traceability</span>
-          <span class="track-panel__tag" style="--tp-color: #B45309;">Market price &amp; yield data</span>
-          <span class="track-panel__tag" style="--tp-color: #B45309;">Farmer-facing mobile tools</span>
-        </div>
-      </div>
-    </div>
-    <div class="tracks-partner-note">
-      <strong>Each track is partner-powered.</strong> Partners provide APIs, datasets or infrastructure, real-world problem statements, and mentorship on the floor. Track availability is subject to partner confirmation closer to the event.
-    </div>
-  </div>
-</section>
-
-
-<!-- SPRINT FLOW -->
-<section class="bl-section bl-section--sand">
-  <div class="bl-section__inner">
-    <span class="eyebrow">Sprint Flow</span>
-    <h2 class="bl-section__heading">How the day runs</h2>
-    <p class="bl-section__sub">The Builders Lab follows a structured arc from kickoff to showcase. Every team moves through the same five stages on the same clock.</p>
-    <div class="sprint-flow" role="list">
-      <div class="sprint-step" role="listitem">
-        <div class="sprint-step__num" aria-hidden="true">1</div>
-        <h3 class="sprint-step__title">Kickoff</h3>
-        <p class="sprint-step__body">Problem alignment, team formation, track introductions, and partner briefings. Builders choose their focus and meet their teammates.</p>
-      </div>
-      <div class="sprint-step" role="listitem">
-        <div class="sprint-step__num" aria-hidden="true">2</div>
-        <h3 class="sprint-step__title">Build Phase</h3>
-        <p class="sprint-step__body">Active development with mentor support on the floor. Teams write code, hit APIs, and iterate fast. Partners available for technical guidance.</p>
-      </div>
-      <div class="sprint-step" role="listitem">
-        <div class="sprint-step__num" aria-hidden="true">3</div>
-        <h3 class="sprint-step__title">Check-ins</h3>
-        <p class="sprint-step__body">Structured mid-sprint progress reviews. Mentors help unblock teams, course-correct, and ensure every group has something to show by end of day.</p>
-      </div>
-      <div class="sprint-step" role="listitem">
-        <div class="sprint-step__num" aria-hidden="true">4</div>
-        <h3 class="sprint-step__title">Demo Prep</h3>
-        <p class="sprint-step__body">Teams finalise their prototypes and prepare short, focused demo pitches. The emphasis is on showing what works — no slide decks required.</p>
-      </div>
-      <div class="sprint-step" role="listitem">
-        <div class="sprint-step__num" aria-hidden="true">5</div>
-        <h3 class="sprint-step__title">Showcase</h3>
-        <p class="sprint-step__body">Live demos to judges, track partners, and conference attendees. Selected projects are highlighted publicly. Partners identify standout talent.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- PARTICIPANT STRUCTURE -->
-<section class="bl-section">
-  <div class="bl-section__inner">
-    <span class="eyebrow">Participant Structure</span>
-    <h2 class="bl-section__heading">Who builds, and how</h2>
-    <p class="bl-section__sub">The Builders Lab is selective by design. A smaller, focused group produces better work than a crowded hall full of strangers.</p>
-    <div class="participant-layout">
-      <div class="participant-stats">
-        <div class="pstat">
-          <span class="pstat__num">30–40</span>
-          <span class="pstat__label">selected developers per track</span>
-        </div>
-        <div class="pstat">
-          <span class="pstat__num">5</span>
-          <span class="pstat__label">domain tracks to choose from</span>
-        </div>
-        <div class="pstat pstat--wide">
-          <span class="pstat__num">1 day</span>
-          <span class="pstat__label">focused sprint · October 23, 2026</span>
-        </div>
-      </div>
-      <div class="participant-detail">
-        <p>Participants apply and select their preferred track. Teams are formed around shared interests or complementary skills within the problem area — not randomly assigned.</p>
-        <p>This structure ensures:</p>
-        <ul class="participant-benefits">
-          <li>Meaningful collaboration between builders who share a domain interest</li>
-          <li>Focused building rather than scope creep or context switching</li>
-          <li>Strong output quality — prototypes that are actually worth showcasing</li>
-          <li>Direct access to partner mentors with relevant expertise</li>
-        </ul>
-        <div class="note-box note-box-yellow" style="margin-top: 0.5rem;">
-          <strong>What you'll build.</strong> Backend APIs and services, AI-powered applications and agents, automation tools and workflows, developer tools and platforms, or cloud-deployed systems — depending on your track.
+        <div class="impact-pillar">
+          <span class="impact-pillar__icon">🌍</span>
+          <p class="impact-pillar__text">Contribute to local and global challenges</p>
         </div>
       </div>
     </div>
   </div>
-</section>
 
 
-<!-- PARTNER ROLE -->
-<section class="bl-section bl-section--forest">
-  <div class="bl-section__inner">
-    <span class="eyebrow" style="color: rgba(255,212,59,0.7);">Partners</span>
-    <h2 class="bl-section__heading bl-section__heading--light">The Builders Lab is partner-powered</h2>
-    <p class="bl-section__sub bl-section__sub--light">Partners don't just sponsor a banner. They shape the track, bring the tools, and work alongside builders on the floor.</p>
-    <div class="partner-grid">
-      <div class="partner-card partner-card--bring">
-        <h3 class="partner-card__title">What partners bring</h3>
-        <ul class="partner-list">
-          <li>A sponsored track or challenge with a defined problem statement</li>
-          <li>APIs, SDKs, datasets, or cloud infrastructure for builders to use</li>
-          <li>Engineers and technical mentors available throughout the sprint</li>
-          <li>Prizes or recognition for standout solutions in their track</li>
-          <li>Feedback and evaluation at the showcase demo session</li>
-        </ul>
-      </div>
-      <div class="partner-card partner-card--get">
-        <h3 class="partner-card__title">What partners gain</h3>
-        <ul class="partner-list">
-          <li>Early access to developer talent before they enter the job market</li>
-          <li>Real-world product exposure and adoption of your tools and APIs</li>
-          <li>Use-case experimentation — what do builders actually build with your product?</li>
-          <li>Brand positioning inside a builder-focused ecosystem in Ghana</li>
-          <li>Relationships with the Python community across West Africa</li>
-        </ul>
-      </div>
-    </div>
-    <div class="partner-cta-strip">
-      <p><strong>Interested in sponsoring a track?</strong> Partner slots for the Builders Lab are separate from general conference sponsorship. Get in touch to discuss track partnership opportunities.</p>
-      <a href="mailto:ho@pythonghana.org?subject=Builders%20Lab%20Track%20Partnership%20%E2%80%94%20PyHo%202026" class="btn-yellow">
-        Enquire about track partnership →
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- EXPECTED OUTCOMES -->
-<section class="bl-section bl-section--sage">
-  <div class="bl-section__inner">
-    <span class="eyebrow">Expected Outcomes</span>
-    <h2 class="bl-section__heading">What the day produces</h2>
-    <p class="bl-section__sub">By the end of the Builders Lab, every participant, partner, and organiser should leave with something real.</p>
-    <div class="outcomes-grid">
-      <div class="outcome-card">
-        <span class="outcome-card__icon">🏗️</span>
-        <h3 class="outcome-card__title">Working prototypes</h3>
-        <p class="outcome-card__body">Teams deliver functional demos — not wireframes or slideshows. Each team ships something that runs, even if it's rough around the edges. That's the standard.</p>
-      </div>
-      <div class="outcome-card">
-        <span class="outcome-card__icon">📢</span>
-        <h3 class="outcome-card__title">Public showcase</h3>
-        <p class="outcome-card__body">Selected projects are showcased to the full PyHo 2026 audience on October 24. Outstanding builds get visibility well beyond the sprint room.</p>
-      </div>
-      <div class="outcome-card">
-        <span class="outcome-card__icon">💡</span>
-        <h3 class="outcome-card__title">Partner insights</h3>
-        <p class="outcome-card__body">Track partners gain direct insight into how developers use their tools, what problems they solve, and where the real-world friction points are.</p>
-      </div>
-      <div class="outcome-card">
-        <span class="outcome-card__icon">💼</span>
-        <h3 class="outcome-card__title">Portfolio-ready work</h3>
-        <p class="outcome-card__body">Every builder leaves with practical, demonstrable engineering work they built themselves. Real code, real problem, real solution — exactly what a portfolio needs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- COMMUNITY IMPACT BAND -->
-<div class="impact-band">
-  <div class="impact-band__inner">
-    <div>
-      <h2 class="impact-band__heading">Bridging learning and real-world application in Ghana's builder ecosystem</h2>
-      <p class="impact-band__body">The Builders Lab is more than a sprint. It's a deliberate effort to close the gap between developers who know Python and developers who build with it — and to do that inside one of Africa's most active Python communities.</p>
-    </div>
-    <div class="impact-pillars">
-      <div class="impact-pillar">
-        <span class="impact-pillar__icon">🔨</span>
-        <p class="impact-pillar__text">Build with modern tools and platforms</p>
-      </div>
-      <div class="impact-pillar">
-        <span class="impact-pillar__icon">⚙️</span>
-        <p class="impact-pillar__text">Gain hands-on engineering experience</p>
-      </div>
-      <div class="impact-pillar">
-        <span class="impact-pillar__icon">🤝</span>
-        <p class="impact-pillar__text">Collaborate across domains</p>
-      </div>
-      <div class="impact-pillar">
-        <span class="impact-pillar__icon">🌍</span>
-        <p class="impact-pillar__text">Contribute to local and global challenges</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- APPLY / PARTNER CTA -->
-<div class="apply-section">
-  <div class="apply-section__inner">
-    <div class="apply-cta">
-      <h2 class="apply-cta__heading">Ready to <em>build and ship</em> something real?</h2>
-      <p class="apply-cta__sub">Applications for the Builders Lab Sprint <em>open shortly</em>. Select your track, apply, and come to Ho prepared to write code and demo something working by end of day.</p>
-      <div class="apply-cta__actions">
-        <!-- <a href="mailto:ho@pythonghana.org?subject=Builders%20Lab%20Application%20Interest%20%E2%80%94%20PyHo%202026" class="btn-yellow">
+  <!-- APPLY / PARTNER CTA -->
+  <div class="apply-section">
+    <div class="apply-section__inner">
+      <div class="apply-cta">
+        <h2 class="apply-cta__heading">Ready to <em>build and ship</em> something real?</h2>
+        <p class="apply-cta__sub">Applications for the Builders Lab Sprint <em>open shortly</em>. Select your track,
+          apply, and come to Ho prepared to write code and demo something working by end of day.</p>
+        <div class="apply-cta__actions">
+          <!-- <a href="mailto:ho@pythonghana.org?subject=Builders%20Lab%20Application%20Interest%20%E2%80%94%20PyHo%202026" class="btn-yellow">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           Apply to Participate
         </a> -->
-        <a href="attend.html" class="btn-ghost-light">
-          Get your conference ticket →
-        </a>
+          <a href="attend.html" class="btn-ghost-light">
+            Get your conference ticket →
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="partner-enquiry">
-      <span class="partner-enquiry__badge">For Partners &amp; Sponsors</span>
-      <h3>Sponsor a Builders Lab track</h3>
-      <p>Track partnerships are open for PyHo 2026. Partner with us to bring your tools, APIs, and challenges to the builders who are building Ghana's next generation of software products.</p>
-      <ul class="partner-enquiry__list">
-        <li>Sponsor a full domain track</li>
-        <li>Provide tools, APIs, or data challenges</li>
-        <li>Place your team on the floor as mentors</li>
-        <li>Offer prizes for standout solutions</li>
-        <li>Get first access to builder talent</li>
-      </ul>
-      <a href="mailto:ho@pythonghana.org?subject=Builders%20Lab%20Track%20Partnership%20%E2%80%94%20PyHo%202026" class="btn-yellow" style="width:100%;justify-content:center;">
-        Enquire about track partnership →
-      </a>
-    </div>
-  </div>
-</div>
-
-
-<!-- ORGANIZER STRIP -->
-<div class="organizer-strip">
-  <p>The PyHo 2026 Builders Conference is organized by the <strong>Python User Group Ho</strong></p>
-</div>
-
-
-<!-- FOOTER -->
-<footer class="site-footer" role="contentinfo">
-  <div class="footer-inner">
-    <div class="footer-top">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <img src="../images/pyho2026-logo.png" alt="PyHo 2026">
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 Python User Group Ho. PyHo 2026 is a community event.</p>
-
-      <div class="footer-socials" aria-label="Social media links">
-
-        <!-- X / Twitter -->
-        <a href="https://x.com/PythonHo" target="_blank" rel="noopener" aria-label="PyHo on X (Twitter)">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      <div class="partner-enquiry">
+        <span class="partner-enquiry__badge">For Partners &amp; Sponsors</span>
+        <h3>Sponsor a Builders Lab track</h3>
+        <p>Track partnerships are open for PyHo 2026. Partner with us to bring your tools, APIs, and challenges to the
+          builders who are building Ghana's next generation of software products.</p>
+        <ul class="partner-enquiry__list">
+          <li>Sponsor a full domain track</li>
+          <li>Provide tools, APIs, or data challenges</li>
+          <li>Place your team on the floor as mentors</li>
+          <li>Offer prizes for standout solutions</li>
+          <li>Get first access to builder talent</li>
+        </ul>
+        <a href="mailto:ho@pythonghana.org?subject=Builders%20Lab%20Track%20Partnership%20%E2%80%94%20PyHo%202026"
+          class="btn-yellow" style="width:100%;justify-content:center;">
+          Enquire about track partnership →
         </a>
-
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/company/pythonho" target="_blank" rel="noopener" aria-label="PyHo on LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-
-        <!-- GitHub -->
-        <a href="https://github.com/hopythonusergroup" target="_blank" rel="noopener" aria-label="PyHo on GitHub">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-
-        <!-- YouTube -->
-        <a href="https://www.youtube.com/@PythonHo" target="_blank" rel="noopener" aria-label="PyHo on YouTube">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-        </a>
-
       </div>
     </div>
   </div>
-</footer>
 
-<script src="../js/site.js"></script>
+
+  <!-- ORGANIZER STRIP -->
+  <div class="organizer-strip">
+    <p>The PyHo 2026 Builders Conference is organized by the <strong>Python User Group Ho</strong></p>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img src="../images/pyho2026-logo.png" alt="PyHo 2026">
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Python User Group Ho. PyHo 2026 is a community event.</p>
+
+        <div class="footer-socials" aria-label="Social media links">
+
+          <!-- X / Twitter -->
+          <a href="https://x.com/PythonHo" target="_blank" rel="noopener" aria-label="PyHo on X (Twitter)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/company/pythonho" target="_blank" rel="noopener"
+            aria-label="PyHo on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/hopythonusergroup" target="_blank" rel="noopener" aria-label="PyHo on GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@PythonHo" target="_blank" rel="noopener" aria-label="PyHo on YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/site.js"></script>
 
 </body>
+
 </html>

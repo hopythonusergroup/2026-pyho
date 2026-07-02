@@ -1,0 +1,721 @@
+/* ============================================================
+   volunteer.css — PyHo 2026 · Volunteer page only
+   Loads after base.css. Zero duplication of base tokens/classes.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   In-page subnav
+   ---------------------------------------------------------- */
+.vol-subnav {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 90;
+  background: var(--forest);
+  border-bottom: 1px solid rgba(255, 212, 59, 0.18);
+}
+
+.vol-subnav__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--sp-5);
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.vol-subnav__inner::-webkit-scrollbar { display: none; }
+
+.vol-subnav__link {
+  display: inline-block;
+  padding: 0.875rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.55);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s, border-color 0.18s;
+  white-space: nowrap;
+}
+.vol-subnav__link:hover { color: var(--cream); }
+.vol-subnav__link.active {
+  color: var(--yellow);
+  border-bottom-color: var(--yellow);
+}
+
+
+/* ----------------------------------------------------------
+   Page sections
+   ---------------------------------------------------------- */
+.vol-section {
+  padding: 5rem var(--sp-5);
+}
+.vol-section--sage   { background: var(--sage); }
+.vol-section--sand   { background: var(--sand); }
+.vol-section--forest { background: var(--forest); }
+
+.vol-section__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.vol-section__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+.vol-section__heading--light { color: var(--white); }
+
+.vol-section__sub {
+  font-size: 1.0625rem;
+  color: #555;
+  max-width: 620px;
+  line-height: 1.65;
+  margin: 0 0 3rem;
+}
+.vol-section__sub--light { color: rgba(255,255,255,0.58); }
+
+
+/* ----------------------------------------------------------
+   Why volunteer — impact strip
+   Three bold numbers that establish the scale
+   ---------------------------------------------------------- */
+.impact-strip {
+  background: var(--yellow);
+  padding: 0;
+}
+
+.impact-strip__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--sp-5);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.impact-stat {
+  padding: 2.25rem var(--sp-5);
+  text-align: center;
+  border-right: 1px solid rgba(26, 58, 42, 0.14);
+}
+.impact-stat:last-child { border-right: none; }
+
+.impact-stat__number {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.impact-stat__label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--forest);
+  opacity: 0.62;
+}
+
+
+/* ----------------------------------------------------------
+   Why volunteer — benefit cards
+   ---------------------------------------------------------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.why-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.875rem 1.625rem;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.why-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.why-card__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.why-card__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+}
+
+.why-card__body {
+  font-size: 0.9rem;
+  line-height: 1.68;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Volunteer roles — grouped by department
+   ---------------------------------------------------------- */
+.roles-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.role-dept {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.role-dept__header {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+  padding: 1.375rem 1.875rem;
+  background: var(--forest);
+}
+
+.role-dept__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.role-dept__name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.role-dept__count {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.role-card {
+  padding: 1.375rem 1.625rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.role-card:hover { background: var(--sage); }
+
+/* Remove right border on last in each row */
+.role-cards .role-card:nth-child(3n) { border-right: none; }
+
+/* Remove bottom border on last row */
+.role-cards .role-card:nth-last-child(-n+3) { border-bottom: none; }
+
+/* Handle cases where last row has fewer than 3 cards */
+.role-cards .role-card:last-child { border-right: none; border-bottom: none; }
+
+.role-card__title {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.role-card__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  flex-shrink: 0;
+  border: 1.5px solid var(--forest);
+}
+
+.role-card__desc {
+  font-size: 0.8125rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 0.625rem;
+}
+
+.role-card__tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.role-tag {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.22em 0.6em;
+  border-radius: 3px;
+}
+.role-tag--day1   { background: rgba(67,56,202,0.1);  color: #4338CA; }
+.role-tag--day2   { background: rgba(26,58,42,0.1);   color: var(--forest); }
+.role-tag--all    { background: rgba(15,118,110,0.1); color: #0F766E; }
+.role-tag--sprint { background: rgba(255,212,59,0.18);color: #7a5f00; }
+.role-tag--dg     { background: rgba(109,40,217,0.1); color: #5b21b6; }
+.role-tag--tech   { background: rgba(180,83,9,0.1);   color: #92400e; }
+
+
+/* ----------------------------------------------------------
+   What to expect section — process steps
+   ---------------------------------------------------------- */
+.expect-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.expect-step {
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--border);
+  position: relative;
+}
+.expect-step:last-child { border-right: none; }
+
+.expect-step__num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--yellow);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  display: block;
+  /* Justified: these are genuinely sequential steps */
+}
+
+.expect-step__title {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.5rem;
+}
+
+.expect-step__body {
+  font-size: 0.875rem;
+  color: #4a4a4a;
+  line-height: 1.65;
+  margin: 0;
+}
+
+
+/* ----------------------------------------------------------
+   What you get — perks list
+   ---------------------------------------------------------- */
+.perks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.perk-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 1.625rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.perk-card__icon {
+  font-size: 1.625rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.perk-card__title {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 0.3rem;
+}
+
+.perk-card__body {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Apply section
+   ---------------------------------------------------------- */
+.apply-band {
+  background: var(--forest);
+  padding: 5rem var(--sp-5);
+  position: relative;
+  overflow: hidden;
+}
+.apply-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.022) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.apply-band__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.apply-copy__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 0.875rem;
+  line-height: 1.15;
+}
+
+.apply-copy__heading em {
+  color: var(--yellow);
+  font-style: normal;
+}
+
+.apply-copy__sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  margin: 0 0 1.75rem;
+}
+
+.apply-deadline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255,212,59,0.65);
+  margin-bottom: 1.75rem;
+}
+
+.apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--forest);
+  background: var(--yellow);
+  border: none;
+  padding: 1rem 2.25rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.12s;
+  white-space: nowrap;
+  line-height: 1;
+}
+.apply-btn:hover {
+  background: var(--yellow-dk);
+  transform: translateY(-2px);
+}
+
+.apply-contact {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.38);
+  margin-top: 1rem;
+}
+.apply-contact a {
+  color: rgba(255,212,59,0.65);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+.apply-contact a:hover { color: var(--yellow); }
+
+/* Application form box */
+.apply-form-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+}
+
+.apply-form-box__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 0.375rem;
+}
+
+.apply-form-box__sub {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.45);
+  margin: 0 0 1.75rem;
+  line-height: 1.55;
+}
+
+.apply-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.apply-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.5;
+}
+
+.apply-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background: rgba(255,212,59,0.12);
+  border: 1px solid rgba(255,212,59,0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.05em;
+}
+
+.apply-check svg {
+  width: 10px;
+  height: 10px;
+  stroke: var(--yellow);
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.apply-form-embed {
+  background: rgba(255,255,255,0.04);
+  border: 1.5px dashed rgba(255,255,255,0.15);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.apply-form-embed__icon {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.apply-form-embed__label {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+}
+
+.apply-form-embed__sub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.28);
+  margin: 0;
+  line-height: 1.55;
+  max-width: 280px;
+}
+
+.apply-form-embed__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--yellow);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255,212,59,0.3);
+  padding-bottom: 1px;
+  transition: border-color 0.15s;
+  margin-top: 0.25rem;
+}
+.apply-form-embed__link:hover { border-color: var(--yellow); }
+
+
+/* ----------------------------------------------------------
+   FAQ
+   ---------------------------------------------------------- */
+.vol-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.vol-faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.vol-faq-item:last-child { border-bottom: none; }
+
+.vol-faq-toggle { display: none; }
+
+.vol-faq-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.75rem;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--forest);
+  transition: background 0.15s;
+}
+.vol-faq-label:hover { background: var(--sage); }
+
+.vol-faq-chevron {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.22s, background 0.15s;
+}
+.vol-faq-chevron svg {
+  width: 10px;
+  height: 10px;
+  stroke: var(--forest);
+  fill: none;
+  stroke-width: 2;
+}
+
+.vol-faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease;
+}
+
+.vol-faq-content {
+  padding: 0 1.75rem 1.375rem;
+  font-size: 0.9375rem;
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+.vol-faq-content p { margin: 0 0 0.75rem; }
+.vol-faq-content p:last-child { margin: 0; }
+.vol-faq-content a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.vol-faq-toggle:checked + .vol-faq-label { background: var(--sage); }
+.vol-faq-toggle:checked + .vol-faq-label .vol-faq-chevron {
+  transform: rotate(180deg);
+  background: var(--yellow);
+}
+.vol-faq-toggle:checked ~ .vol-faq-body { max-height: 400px; }
+
+
+/* ----------------------------------------------------------
+   Responsive
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .role-cards       { grid-template-columns: repeat(2, 1fr); }
+  .role-cards .role-card:nth-child(3n)     { border-right: 1px solid var(--border); }
+  .role-cards .role-card:nth-last-child(-n+3) { border-bottom: 1px solid var(--border); }
+  .role-cards .role-card:nth-child(2n)     { border-right: none; }
+  .role-cards .role-card:nth-last-child(-n+2) { border-bottom: none; }
+  .role-cards .role-card:last-child        { border-right: none; border-bottom: none; }
+  .expect-grid      { grid-template-columns: repeat(2, 1fr); }
+  .expect-step:nth-child(2) { border-right: none; }
+  .expect-step:nth-child(3) { border-top: 1px solid var(--border); }
+  .expect-step:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+}
+
+@media (max-width: 900px) {
+  .impact-strip__inner  { grid-template-columns: repeat(2, 1fr); }
+  .impact-stat:nth-child(2) { border-right: none; }
+  .impact-stat:nth-child(3),
+  .impact-stat:nth-child(4) { border-top: 1px solid rgba(26,58,42,0.14); }
+  .why-grid             { grid-template-columns: repeat(2, 1fr); }
+  .perks-grid           { grid-template-columns: 1fr; }
+  .apply-band__inner    { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .vol-section          { padding: 3.5rem var(--sp-4); }
+  .apply-band           { padding: 3.5rem var(--sp-4); }
+  .role-cards           { grid-template-columns: 1fr; }
+  .role-cards .role-card          { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+  .role-cards .role-card:last-child { border-bottom: none !important; }
+  .expect-grid          { grid-template-columns: 1fr; }
+  .expect-step          { border-right: none; border-bottom: 1px solid var(--border); }
+  .expect-step:last-child { border-bottom: none; }
+  .expect-step:nth-child(3),
+  .expect-step:nth-child(4) { border-top: none; }
+  .why-grid             { grid-template-columns: 1fr; }
+  .vol-faq-label        { font-size: 0.875rem; padding: 1.125rem 1.375rem; }
+  .vol-faq-content      { padding: 0 1.375rem 1.25rem; }
+}
+
+@media (max-width: 600px) {
+  .vol-subnav__link     { padding: 0.75rem 1rem; font-size: 0.75rem; }
+  .impact-strip__inner  { grid-template-columns: 1fr 1fr; }
+  .apply-btn            { width: 100%; justify-content: center; }
+}
