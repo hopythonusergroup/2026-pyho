@@ -1,14 +1,4 @@
-/* ============================================================
-   builders-lab.css — PyHo 2026 · Builders Lab Sprint page only
-   Loads after base.css. Zero duplication of base tokens/classes.
-   ============================================================ */
 
-
-/* ----------------------------------------------------------
-   Statement band — the page's signature element.
-   Full-bleed forest block with the "not a workshop / Build+Ship"
-   contrast displayed at poster scale. Sits directly below hero.
-   ---------------------------------------------------------- */
 .statement-band {
   background: var(--forest);
   padding: 4rem var(--sp-5);
