@@ -1,3 +1,9 @@
+/* ============================================================
+   schedule.css — PyHo 2026 · Schedule page only
+   Loads after base.css. Zero duplication of base tokens/classes.
+   ============================================================ */
+
+
 /* ----------------------------------------------------------
    In-page subnav
    ---------------------------------------------------------- */
@@ -861,8 +867,8 @@
 }
 
 .talk-card__avatar {
-  width: 20%;
-  height: 20%;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--sage);
   border: 1.5px solid var(--border);
