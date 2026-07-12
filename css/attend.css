@@ -1,12 +1,11 @@
-/* ============================================================
-   attend.css — PyHo 2026 · Attend page only
-   Loads after base.css. Zero duplication of base tokens/classes.
-   ============================================================ */
 
+@keyframes egotickets-spin {
+  to { transform: rotate(360deg); }
+}
+#egotickets-widget-container * {
+  box-sizing: border-box;
+}
 
-/* ----------------------------------------------------------
-   In-page subnav
-   ---------------------------------------------------------- */
 .attend-subnav {
   position: sticky;
   top: var(--nav-h);

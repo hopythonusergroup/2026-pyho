@@ -1,10 +1,3 @@
-/* ============================================================
-   PyHo 2026 — about.css
-   Page-specific styles for pages/about.html only.
-   base.css is always loaded before this file.
-   ============================================================ */
-
-
 /* ── PAGE HERO OVERRIDES ── */
 /* The about page hero carries a subtle mountain texture */
 .page-hero-about {
