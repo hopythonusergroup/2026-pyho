@@ -854,6 +854,16 @@
 }
 .talk-card--keynote .talk-card__title { font-size: 1.0625rem; }
 
+.talk-title-link {
+  color: var(--yellow);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.talk-title-link:hover {
+  border-bottom-color: var(--yellow);
+}
+
 .talk-card__speaker {
   display: flex;
   align-items: center;
